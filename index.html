@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crown Hudson Law</title>
+<meta name="description" content="Crown Hudson Law PLLC — U.S. trademark counsel for international brands and the firms that serve them. Flat-fee, by email.">
+<style>
+  :root{
+    --paper:#FBFAF7; --paper-2:#F3F1EC; --line:#E4E0D8;
+    --ink:#16191F; --ink-2:#454C55; --ink-3:#7A828C;
+    --accent:#1F4E79; --accent-2:#2C6BA0; --accent-soft:#EAF0F6;
+    --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --wrap:1080px;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --paper:#0F1319; --paper-2:#161B23; --line:#262D38;
+      --ink:#E9EBEF; --ink-2:#AAB2BD; --ink-3:#7A828F;
+      --accent:#86B6E6; --accent-2:#A9CDEF; --accent-soft:#141F2B;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+       font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  .wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.01em;line-height:1.15;color:var(--ink)}
+
+  /* header */
+  header.site{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+  .brand .mk{color:var(--accent)}
+  nav.top a{color:var(--ink-2);font-size:.92rem;margin-left:26px}
+  nav.top a:hover{color:var(--accent);text-decoration:none}
+  @media(max-width:640px){nav.top{display:none}}
+
+  /* hero */
+  .hero{padding:78px 0 64px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-family:var(--sans);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:20px}
+  .hero h1{font-size:clamp(2.3rem,5.4vw,3.5rem);margin:0 0 18px;max-width:16ch}
+  .hero p.lede{font-size:1.2rem;color:var(--ink-2);max-width:62ch;margin:0 0 28px}
+  .soon{display:inline-flex;align-items:center;gap:9px;background:var(--accent-soft);color:var(--accent);
+    border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:999px;
+    padding:7px 16px;font-size:.85rem;font-weight:600}
+  .soon .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px color-mix(in srgb,var(--accent) 20%,transparent)}
+
+  section{padding:64px 0;border-bottom:1px solid var(--line)}
+  .sec-label{font-family:var(--sans);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--ink-3);font-weight:600;margin-bottom:14px}
+  section h2{font-size:1.9rem;margin:0 0 10px}
+  section .intro{color:var(--ink-2);max-width:60ch;margin:0 0 34px}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:26px 24px}
+  .card h3{font-size:1.18rem;margin:0 0 10px}
+  .card p{margin:0;color:var(--ink-2);font-size:.97rem}
+  .card .tag{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:12px}
+
+  .approach{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  @media(max-width:820px){.approach{grid-template-columns:1fr}}
+  .approach div h3{font-size:1.05rem;margin:0 0 6px}
+  .approach div p{margin:0;color:var(--ink-2);font-size:.95rem}
+
+  .about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+  @media(max-width:820px){.about{grid-template-columns:1fr}}
+  .about p{color:var(--ink-2)}
+  .creds{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:24px}
+  .creds dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:.93rem}
+  .creds dt{color:var(--ink-3);font-family:var(--sans)}
+  .creds dd{margin:0;color:var(--ink);font-weight:500}
+
+  .contact{text-align:center;background:var(--accent-soft);border-radius:16px;padding:52px 24px;border:1px solid var(--line)}
+  .contact h2{font-size:1.9rem;margin:0 0 10px}
+  .contact p{color:var(--ink-2);max-width:52ch;margin:0 auto}
+
+  footer.site{padding:40px 0 56px}
+  footer .adv{font-family:var(--sans);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--accent);font-weight:700;margin-bottom:12px}
+  footer p{color:var(--ink-3);font-size:.85rem;max-width:70ch;margin:0 0 8px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap bar">
+    <div class="brand">Crown&nbsp;Hudson<span class="mk">&nbsp;Law</span></div>
+    <nav class="top">
+      <a href="#services">Services</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" style="border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="eyebrow">Crown Hudson Law PLLC · New York</div>
+      <h1>U.S. trademark counsel for international brands.</h1>
+      <p class="lede">A New York law firm handling federal trademark matters — applications, USPTO Office Action responses, and Madrid&nbsp;Protocol §66(a) provisional-refusal responses — on a flat-fee basis, entirely by email.</p>
+      <span class="soon"><span class="dot"></span>Launching soon — intake opens shortly</span>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-label">Services</div>
+      <h2>What we handle</h2>
+      <p class="intro">Federal trademark practice before the U.S. Patent and Trademark Office, for foreign-domiciled brand owners and the firms that represent them.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">Foreign applicants</div>
+          <h3>U.S. registration</h3>
+          <p>If your business is based outside the United States, U.S. law requires a U.S.-licensed attorney to represent you before the USPTO (37 C.F.R. §&nbsp;2.11). We handle the clearance, filing, and prosecution to registration.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Refusals</div>
+          <h3>Office Action responses</h3>
+          <p>Most applications draw a refusal. We respond to §&nbsp;2(d) likelihood-of-confusion and §&nbsp;2(e) descriptiveness refusals — and tell you plainly whether a refusal is worth fighting, amending around, or not.</p>
+        </div>
+        <div class="card">
+          <div class="tag">Madrid Protocol</div>
+          <h3>§66(a) provisional refusals</h3>
+          <p>When a Madrid extension of protection to the U.S. draws a provisional refusal, the holder needs U.S. counsel of record. We serve as that counsel on a flat, per-response fee.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="sec-label">Approach</div>
+      <h2>How we practice</h2>
+      <div class="approach">
+        <div>
+          <h3>Flat fee</h3>
+          <p>A single, all-in fee quoted before any work begins, stated plainly in the engagement — no surprises.</p>
+        </div>
+        <div>
+          <h3>By email</h3>
+          <p>Intake by secure form, all communication in writing. No calls required — faster and clearer for clients who value a written record.</p>
+        </div>
+        <div>
+          <h3>Personally reviewed</h3>
+          <p>Every filing is reviewed and signed by a licensed attorney. We do not file work we have not read.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <div class="sec-label">About</div>
+        <h2 style="margin-bottom:14px">Nicholas K. Harris, Esq.</h2>
+        <p>Crown Hudson Law PLLC is a New York professional limited liability company. Its practice is federal trademark prosecution before the U.S. Patent and Trademark Office and related data-privacy compliance work.</p>
+        <p>The firm is built around written, asynchronous work — a document-driven process that is faster and clearer for clients who prefer a written record over phone calls. The firm is not affiliated with the USPTO or any government agency.</p>
+      </div>
+      <div class="creds">
+        <dl>
+          <dt>Admitted</dt><dd>New York, 2011</dd>
+          <dt>Reg. No.</dt><dd>4894994</dd>
+          <dt>Status</dt><dd>Currently registered</dd>
+          <dt>Focus</dt><dd>Trademark prosecution</dd>
+          <dt>Also</dt><dd>LL.M., cybersecurity &amp; data privacy</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-bottom:none">
+    <div class="wrap">
+      <div class="contact">
+        <h2>Intake opens shortly</h2>
+        <p>The firm is preparing to open for new matters. Client intake and contact details will be available here soon.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="adv">Attorney Advertising</div>
+    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+    <p>© 2026 Crown Hudson Law PLLC · Nicholas K. Harris, Esq. · New York</p>
+  </div>
+</footer>
+
+</body>
+</html>
