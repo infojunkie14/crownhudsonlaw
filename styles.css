@@ -106,7 +106,7 @@ nav.top a.on{color:#D9B876}
 
 .closing{padding:96px 0 100px;text-align:center;position:relative}
 @media(max-width:900px){.closing{padding:70px 0 76px}}
-.closing h2{margin:0 0 18px;font-weight:500;font-size:clamp(38px,4.6vw,54px);color:#F4EEDF;line-height:1.08}
+.closing h1,.closing h2{margin:0 0 18px;font-weight:500;font-size:clamp(38px,4.6vw,54px);color:#F4EEDF;line-height:1.08}
 .closing p{margin:0 auto;max-width:44ch;font-size:21px;color:#B7B1A4;line-height:1.5}
 
 /* article/prose blocks for content pages */
