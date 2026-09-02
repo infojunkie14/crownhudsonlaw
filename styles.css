@@ -114,7 +114,7 @@ html.js .reveal.d3{transition-delay:.24s}
   html.js .reveal{opacity:1;transform:none;transition:none}
   .draw path,.draw circle{stroke-dashoffset:0 !important;animation:none !important;opacity:1 !important}
   .draw .hatch{opacity:1 !important;animation:none !important}
-  .scroll-cue span{animation:none}
+  .scroll-cue span{animation:none !important}
   *{transition-duration:.01ms !important}
 }
 
@@ -138,7 +138,7 @@ html.js .reveal.d3{transition-delay:.24s}
 .tick{width:44px;height:1px;background:var(--gold);flex:none}
 .wm-num{position:absolute;right:var(--gutter);top:50%;transform:translateY(-50%);font-family:var(--serif);font-weight:500;font-size:clamp(150px,28vw,360px);line-height:1;color:var(--gold);opacity:.065;pointer-events:none;user-select:none;letter-spacing:-.04em}
 .wm-emblem{position:absolute;right:-5%;top:50%;transform:translateY(-50%);width:min(44vw,520px);height:auto;color:var(--gold);opacity:.09;pointer-events:none;z-index:0}
-.page-top{overflow:hidden}
+.page-top{overflow:clip}
 .page-top>.wrap{z-index:1}
 .hero-wm{top:-24px;right:-6%;transform:none;width:min(42vw,460px);opacity:.11}
 @media(max-width:760px){.hero-wm{width:72vw;right:-26%;top:-10px;opacity:.06}}
@@ -175,18 +175,20 @@ nav.top a.on::after{transform:scaleX(1);opacity:.7}
   .nav-toggle-bars::before{top:0}
   .nav-toggle-bars::after{bottom:0;right:4px}
   nav.top{display:none}
-  nav.top:target,html.nav-open nav.top{display:flex;position:fixed;inset:0;z-index:60;flex-direction:column;justify-content:center;align-items:stretch;gap:0;padding:92px var(--gutter) 48px;background:var(--obsidian);overflow:auto}
+  nav.top:target,html.nav-open nav.top{display:flex;position:fixed;inset:0;z-index:60;flex-direction:column;justify-content:safe center;align-items:stretch;gap:0;padding:92px var(--gutter) 48px;background:var(--obsidian);overflow:auto}
   nav.top:target::before,html.nav-open nav.top::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(90% 60% at 100% 0%, rgba(201,164,94,.12), rgba(10,14,20,0) 60%)}
   nav.top a{font-family:var(--serif);font-size:clamp(32px,9vw,44px);font-weight:500;letter-spacing:-.01em;color:var(--ink);padding:14px 0;border-bottom:1px solid var(--line);line-height:1.1}
   nav.top a::after{display:none}
   nav.top a.on{color:var(--gold-2)}
   nav.top a.nav-close + a{border-top:1px solid var(--line)}
   nav.top .pill{margin-top:28px;align-self:flex-start}
-  .nav-close{display:inline-flex;align-items:center;gap:10px;position:absolute;top:22px;right:var(--gutter);min-height:44px;padding:8px 0 8px 12px;font-family:var(--sans) !important;font-size:12px !important;letter-spacing:.24em !important;text-transform:uppercase;font-weight:600;color:var(--gold) !important;border:none !important}
+  nav.top a.nav-close{display:inline-flex;align-items:center;gap:10px;position:absolute;top:22px;right:var(--gutter);left:auto;width:auto;line-height:1;z-index:2;min-height:44px;padding:8px 0 8px 12px;font-family:var(--sans) !important;font-size:12px !important;letter-spacing:.24em !important;text-transform:uppercase;font-weight:600;color:var(--gold) !important;border:none !important}
   .nav-close::before{content:"";width:14px;height:14px;background:
     linear-gradient(45deg,transparent 46%,var(--gold) 46%,var(--gold) 54%,transparent 54%),
     linear-gradient(-45deg,transparent 46%,var(--gold) 46%,var(--gold) 54%,transparent 54%)}
   html.nav-open{overflow:hidden}
+  html.nav-open nav.top{overscroll-behavior:contain}
+  html.nav-open .progress{display:none}
 }
 
 /* ---------------------------------------------------------- hero, home */
@@ -398,8 +400,7 @@ a.cardlink.featured .go{position:relative}
 .cardlink .price{font-family:var(--serif);font-size:clamp(54px,7vw,84px);font-weight:500;color:var(--gold-2);line-height:.95;letter-spacing:-.02em;margin-bottom:22px;font-variant-numeric:lining-nums}
 body.p-pricing a.cardlink{padding:38px 32px 34px}
 body.p-pricing a.cardlink h3{font-size:26px}
-body.p-pricing a.cardlink::after{content:"";position:absolute;left:32px;top:112px;width:36px;height:1px;background:var(--gold);opacity:.7}
-@media(max-width:900px){body.p-pricing a.cardlink::after{top:104px}}
+.cardlink .price::after{content:"";display:block;width:36px;height:1px;background:var(--gold);opacity:.7;margin-top:16px}
 
 /* ------------------------------------------------------------ contact */
 body.p-contact .counsel{align-items:start}
@@ -479,3 +480,5 @@ footer p.copy{margin:0;color:var(--faint)}
   a{color:inherit}
   @page{margin:18mm 16mm}
 }
+/* phone tap targets (engineering critique) */
+@media(max-width:860px){footer .fnav a,.svc .more,.nf-links a,.crumbs a,.toc a,.ledger a{display:inline-flex;align-items:center;min-height:44px}.nf-links{gap:4px 28px}}
