@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
@@ -33,29 +34,58 @@
   "mainEntityOfPage": "https://crownhudsonlaw.com/insights/us-trademark-application-timeline/"
 }
 </script>
+<script src="/site.js" defer></script>
 </head>
-<body>
+<body class="p-article">
 
 <div class="hairline"></div>
 
-<div style="position:relative">
-  <div class="atmo"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site-top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="ch-hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3.2" stroke="currentColor" stroke-width=".55" opacity=".5"/></pattern><pattern id="ch-hatch-fine" width="1.15" height="1.15" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.15" stroke="currentColor" stroke-width=".5" opacity=".42" vector-effect="non-scaling-stroke"/></pattern><symbol id="ch-emblem" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="l1" vector-effect="non-scaling-stroke" d="M22 78V46l22 16 16-32 16 32 22-16v32z"/>
+<path class="l2" vector-effect="non-scaling-stroke" d="M22 78h76v10H22z"/>
+</g>
+<g class="hatch" fill="url(#ch-hatch)" stroke="none">
+<path d="M22 78h76v10H22z"/>
+<path d="M22 78V46l22 16 16-32 16 32 22-16v32z" opacity=".45"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path class="l2" vector-effect="non-scaling-stroke" d="M60 58l6 8-6 8-6-8z"/>
+<circle class="l1" vector-effect="non-scaling-stroke" cx="22" cy="46" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="60" cy="30" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="98" cy="46" r="3"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round">
+<path class="l3" vector-effect="non-scaling-stroke" stroke-width="1.3" d="M12 99c16-7 28 5 46-1s30-9 50 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".6" d="M18 107c16-7 28 5 44-1s26-8 44 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1" opacity=".32" d="M26 115c14-6 24 4 38-1s22-7 36 0"/>
+</g></symbol></defs></svg>
   <div class="wrap">
     <header class="site">
-      <a class="brand" href="/">
-        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.5" stroke="#C9A45E" stroke-width="1"/><path d="M24 12 L33.5 24 L24 36 L14.5 24 Z" stroke="#C9A45E" stroke-width="1"/><path d="M24 17 L24 31" stroke="#C9A45E" stroke-width="0.8" opacity="0.75"/></svg>
+      <a class="brand" href="/" aria-label="Crown Hudson Law, home">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
         <span class="serif">Crown Hudson Law</span>
       </a>
-      <nav class="top">
+      <a class="nav-toggle" href="#site-nav" data-nav-toggle><span class="nav-toggle-bars" aria-hidden="true"></span><span>Menu</span></a>
+      <nav class="top" id="site-nav" aria-label="Primary">
+        <a class="nav-close" href="#" data-nav-close>Close</a>
         <a href="/services/">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/for-firms/">For firms</a>
         <a href="/counsel/">Counsel</a>
+        <a href="/insights/" class="on" aria-current="page">Insights</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">Contact</a>
         <span class="pill"><span class="dot"></span>Launching soon</span>
       </nav>
     </header>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-top" style="position:relative">
+  <div class="atmo"></div>
+  <svg class="wm-emblem hero-wm" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+  <div class="wrap">
 
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/insights/">Insights</a><span class="sep">/</span>The Life of a U.S. Trademark Application</div>
 
@@ -69,20 +99,35 @@
       <p class="it lede">Every application walks the same road, from the day it is filed to the day the certificate issues; knowing the road is most of the comfort.</p>
     </section>
 
-    <div class="label">By Nicholas K. Harris, Esq. · September 2026</div>
-
-    <article class="prose">
-      <h2>The road in one view</h2>
+    <div class="article-grid">
+      <aside class="article-rail">
+        <div class="byline"><svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg><div class="label">By Nicholas K. Harris, Esq. · September 2026</div></div>
+        <nav class="toc" aria-labelledby="toc-h">
+          <h2 class="toc-h" id="toc-h">Contents</h2>
+          <ol>
+          <li><a href="#the-road-in-one-view">The road in one view</a></li>
+          <li><a href="#filing-where-the-record-begins">Filing: where the record begins</a></li>
+          <li><a href="#examination-where-most-refusals-happen">Examination: where most refusals happen</a></li>
+          <li><a href="#publication-and-the-opposition-window">Publication and the opposition window</a></li>
+          <li><a href="#two-roads-in-use-and-intent-to-use">Two roads in: use and intent to use</a></li>
+          <li><a href="#the-statement-of-use">The statement of use</a></li>
+          <li><a href="#after-the-certificate">After the certificate</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <div class="article-main">
+        <article class="prose">
+      <h2 id="the-road-in-one-view">The road in one view</h2>
       <p>Every federal trademark application passes through the same five stages, in the same order: filing, examination, publication, an opposition window, and registration. The stages never change. What changes from one file to the next is how long each stage takes, and whether the application gets stopped at one of the two places where applications actually die.</p>
       <p>Anyone looking up the U.S. trademark application timeline is really asking two questions: what happens at each stage, and where can it go wrong. This article answers both, in order.</p>
       <p>As for pace: months usually pass before an examining attorney first opens the file, and even a clean application commonly takes about a year from filing to certificate. An application that draws a refusal, or the rare one that draws an opposition, takes longer. None of that reflects on the strength of the mark. The queue is the queue.</p>
 
-      <h2>Filing: where the record begins</h2>
+      <h2 id="filing-where-the-record-begins">Filing: where the record begins</h2>
       <p>An application is a short document with long consequences. It names the applicant, shows the mark, identifies the goods or services the mark will cover, states a legal basis for filing, and, for marks already in use, includes a specimen: real-world proof of the mark on the goods or in the actual sale of the services.</p>
       <p>The filing date is the prize. Once a registration issues, its legal effect reaches back to the day the application was filed, which operates as nationwide constructive use against later adopters. That is why filing early beats filing late and polished. It is also why the details filed on day one matter so much: the identification of goods and services can be narrowed after filing but never broadened, so a cramped identification is a permanent one, and a sloppy one invites trouble at examination.</p>
       <p>One structural rule sits at this stage. Applicants domiciled outside the United States must be represented by a U.S.-licensed attorney under 37 C.F.R. 2.11. A foreign applicant who files without counsel does not lose the application, but the examining attorney will require one to be appointed, and nothing moves forward until an attorney appears. Getting the record right the first time is the whole point of our <a class="gold" href="/services/us-trademark-registration/">flat-fee registration service</a>; everything that follows is built on what was filed here.</p>
 
-      <h2>Examination: where most refusals happen</h2>
+      <h2 id="examination-where-most-refusals-happen">Examination: where most refusals happen</h2>
       <p>After the wait, the USPTO assigns the application to an examining attorney: a government lawyer whose job is to find every reason the mark cannot register. If the examiner finds none, the application moves forward. If the examiner finds any, the applicant receives an Office Action, a formal letter refusing registration or demanding changes. This is the first of the two places applications die, and by a wide margin the busier one.</p>
       <p>The common grounds:</p>
       <ul>
@@ -94,40 +139,80 @@
       </ul>
       <p>An Office Action carries a strict, short response deadline, and an application that misses it goes abandoned. Most refusals are answerable, by argument, by amendment, or by both, and answering them well is its own discipline; it is the center of our <a class="gold" href="/services/office-action-responses/">Office Action response practice</a>. When a response does not persuade the examiner, a final Office Action follows, and the choices narrow to a request for reconsideration or an appeal to the Trademark Trial and Appeal Board. Most files never get that far. A well-chosen mark with a carefully drafted application frequently passes examination with no refusal at all.</p>
 
-      <h2>Publication and the opposition window</h2>
+      <h2 id="publication-and-the-opposition-window">Publication and the opposition window</h2>
       <p>An application that clears examination is published for opposition in the USPTO's Official Gazette. Publication is the government saying, in public: we intend to register this mark, and anyone who objects should speak now.</p>
       <p>Publication opens a brief statutory window in which any party who believes it would be damaged by the registration may file an opposition, or request more time to decide. This is the second place applications die, though it is a quiet one: the overwhelming majority of published applications pass through the window untouched. When an opposition does come, it takes the form of a litigation-style proceeding before the Trademark Trial and Appeal Board, with pleadings, discovery, and briefs. Oppositions are the exception, and the surest way to stay in the majority is the same clearance work that prevents Section 2(d) refusals in the first place.</p>
 
-      <h2>Two roads in: use and intent to use</h2>
+      <h2 id="two-roads-in-use-and-intent-to-use">Two roads in: use and intent to use</h2>
       <p>Domestic applicants file on one of two bases. A Section 1(a) application says the mark is already in use in commerce, and proves it with a specimen at filing. A Section 1(b) application says the applicant has a bona fide intent to use the mark, and lets the filing date be secured before the product ships or the service launches. Intent to use is not a loophole; the intent must be genuine, and the proof of use still has to arrive before any registration does.</p>
       <p>Foreign applicants have two more doors: an application or registration in their home country under Section 44, or an extension of an international registration to the United States under Section 66(a) of the Madrid Protocol. A Madrid extension is examined by the same examining attorneys under the same substantive law, and when the USPTO refuses one, 37 C.F.R. 2.11 requires U.S. counsel to answer. That situation is common enough that it has <a class="gold" href="/services/madrid-protocol-refusals/">its own page</a>.</p>
       <p>The roads converge at publication and then split once more. A use-based application that survives the opposition window registers. An intent-to-use application that survives the window does not register yet; it receives a notice of allowance instead, and one step remains.</p>
 
-      <h2>The statement of use</h2>
+      <h2 id="the-statement-of-use">The statement of use</h2>
       <p>The notice of allowance starts the clock on the statement of use: a sworn filing that the mark is now used in commerce on the goods or services in the application, supported by a specimen. The rules allow a limited series of extensions for applicants who need more runway, but the accommodation eventually runs out, and an intent-to-use application registers only after the USPTO accepts real proof of use.</p>
       <p>Specimens are examined, not rubber-stamped. A label mocked up for the filing, a webpage that never went live, a product photo staged for the occasion: these fail, and they fail on the permanent public record of the application. The statement of use is the stage where honest preparation months earlier pays off, because the applicant who planned the launch around the filing has real commerce to show.</p>
 
-      <h2>After the certificate</h2>
+      <h2 id="after-the-certificate">After the certificate</h2>
       <p>Registration is durable, but it is not self-sustaining. Federal law requires periodic maintenance filings for as long as the registration lives: declarations of continued use under Section 8, or under Section 71 for a Madrid extension, and renewals under Section 9, on a fixed statutory schedule. Miss a required filing and the grace period behind it, and the registration is cancelled, regardless of how strong the mark is or how much has been invested in it.</p>
       <p>The practical rule is simple: the maintenance dates belong in a professionally kept docket on the day the certificate issues, not in a drawer with the certificate. A registration maintained on schedule can, in principle, last as long as the mark itself is used. The certificate is not the finish line; it is the point where the application's life ends and the registration's begins.</p>
 
       <p>If you are holding a filing receipt, an Office Action, or a mark you have not yet filed, and any stretch of this road is unclear, <a class="gold" href="/contact/">write to the firm</a>. Questions are welcome, and they are answered in plain terms.</p>
-      <p style="font-size:13px;color:#666B74">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
+      <p style="font-size:13px;color:#8B9199">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
     </article>
+        <div class="author-card">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+        <div>
+          <span class="label">About the author</span>
+          <p class="author-name">Nicholas K. Harris, Esq.</p>
+          <p class="author-role">Principal and Counsel of Record, Crown Hudson Law Firm PLLC. Admitted in New York, 2011.</p>
+          <a href="/counsel/">About the counsel.</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <section class="related" aria-labelledby="related-h">
+      <div class="sec-kicker reveal"><span class="tick"></span><h2 class="label" id="related-h">Further reading</h2></div>
+      <div class="cardlink-grid">
+        <a class="cardlink" href="/insights/trademark-application-refused-options/">
+          <h3>Your Application Was Refused. Now What?</h3>
+          <p>How to read the refusal, the five realistic paths forward, and telling a winnable fight from a bad one.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/can-foreign-company-file-us-trademark-itself/">
+          <h3>Can a Foreign Company File Itself?</h3>
+          <p>The domicile rule, the workarounds that fail, and how the USPTO enforces the counsel requirement.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/new-attorney-existing-application/">
+          <h3>Changing Attorneys Mid-Application</h3>
+          <p>How takeover representation works: appearance, revocation, what to hand over, what can still be fixed.</p>
+          <span class="go">Read the article</span>
+        </a>
+      </div>
+    </section>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="fbrand">
-      <span class="mark"></span>
-      <span class="serif name">Crown Hudson Law</span>
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg class="emblem emblem-md" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+          <span class="serif name">Crown Hudson Law</span>
+        </div>
+        <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
+      </div>
+      <nav class="fnav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+      <div>
+        <div class="label adv">Attorney Advertising</div>
+        <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+        <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+      </div>
     </div>
-    <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
-    <div class="fnav"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
-    <div class="label adv">Attorney Advertising</div>
-    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
-    <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+    <div class="fword" aria-hidden="true">Crown Hudson</div>
   </div>
 </footer>
 

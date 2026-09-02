@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
@@ -33,29 +34,58 @@
   "mainEntityOfPage": "https://crownhudsonlaw.com/insights/foreign-applicants-us-attorney-requirement/"
 }
 </script>
+<script src="/site.js" defer></script>
 </head>
-<body>
+<body class="p-article">
 
 <div class="hairline"></div>
 
-<div style="position:relative">
-  <div class="atmo"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site-top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="ch-hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3.2" stroke="currentColor" stroke-width=".55" opacity=".5"/></pattern><pattern id="ch-hatch-fine" width="1.15" height="1.15" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.15" stroke="currentColor" stroke-width=".5" opacity=".42" vector-effect="non-scaling-stroke"/></pattern><symbol id="ch-emblem" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="l1" vector-effect="non-scaling-stroke" d="M22 78V46l22 16 16-32 16 32 22-16v32z"/>
+<path class="l2" vector-effect="non-scaling-stroke" d="M22 78h76v10H22z"/>
+</g>
+<g class="hatch" fill="url(#ch-hatch)" stroke="none">
+<path d="M22 78h76v10H22z"/>
+<path d="M22 78V46l22 16 16-32 16 32 22-16v32z" opacity=".45"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path class="l2" vector-effect="non-scaling-stroke" d="M60 58l6 8-6 8-6-8z"/>
+<circle class="l1" vector-effect="non-scaling-stroke" cx="22" cy="46" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="60" cy="30" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="98" cy="46" r="3"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round">
+<path class="l3" vector-effect="non-scaling-stroke" stroke-width="1.3" d="M12 99c16-7 28 5 46-1s30-9 50 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".6" d="M18 107c16-7 28 5 44-1s26-8 44 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1" opacity=".32" d="M26 115c14-6 24 4 38-1s22-7 36 0"/>
+</g></symbol></defs></svg>
   <div class="wrap">
     <header class="site">
-      <a class="brand" href="/">
-        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.5" stroke="#C9A45E" stroke-width="1"/><path d="M24 12 L33.5 24 L24 36 L14.5 24 Z" stroke="#C9A45E" stroke-width="1"/><path d="M24 17 L24 31" stroke="#C9A45E" stroke-width="0.8" opacity="0.75"/></svg>
+      <a class="brand" href="/" aria-label="Crown Hudson Law, home">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
         <span class="serif">Crown Hudson Law</span>
       </a>
-      <nav class="top">
+      <a class="nav-toggle" href="#site-nav" data-nav-toggle><span class="nav-toggle-bars" aria-hidden="true"></span><span>Menu</span></a>
+      <nav class="top" id="site-nav" aria-label="Primary">
+        <a class="nav-close" href="#" data-nav-close>Close</a>
         <a href="/services/">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/for-firms/">For firms</a>
         <a href="/counsel/">Counsel</a>
+        <a href="/insights/" class="on" aria-current="page">Insights</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">Contact</a>
         <span class="pill"><span class="dot"></span>Launching soon</span>
       </nav>
     </header>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-top" style="position:relative">
+  <div class="atmo"></div>
+  <svg class="wm-emblem hero-wm" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+  <div class="wrap">
 
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/insights/">Insights</a><span class="sep">/</span>Why Foreign Trademark Applicants Need a U.S. Attorney</div>
 
@@ -69,32 +99,47 @@
       <p class="it lede">A rule the USPTO adopted in 2019 quietly redrew the map for every applicant who lives outside the United States, and it forgives very little.</p>
     </section>
 
-    <div class="label">By Nicholas K. Harris, Esq. · September 2026</div>
-
-    <article class="prose">
-      <h2>The rule, in one paragraph</h2>
+    <div class="article-grid">
+      <aside class="article-rail">
+        <div class="byline"><svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg><div class="label">By Nicholas K. Harris, Esq. · September 2026</div></div>
+        <nav class="toc" aria-labelledby="toc-h">
+          <h2 class="toc-h" id="toc-h">Contents</h2>
+          <ol>
+          <li><a href="#the-rule-in-one-paragraph">The rule, in one paragraph</a></li>
+          <li><a href="#who-counts-as-foreign-domiciled">Who counts as foreign-domiciled</a></li>
+          <li><a href="#why-the-uspto-adopted-it-in-2019">Why the USPTO adopted it in 2019</a></li>
+          <li><a href="#what-happens-to-an-application-filed-without-counsel">What happens to an application filed without counsel</a></li>
+          <li><a href="#madrid-filings-the-exception-that-is-not-really-one">Madrid filings: the exception that is not really one</a></li>
+          <li><a href="#how-to-comply-cleanly">How to comply, cleanly</a></li>
+          <li><a href="#for-foreign-firms-and-agents">For foreign firms and agents</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <div class="article-main">
+        <article class="prose">
+      <h2 id="the-rule-in-one-paragraph">The rule, in one paragraph</h2>
       <p>Since August 3, 2019, every trademark applicant, registrant, and party to a Trademark Trial and Appeal Board proceeding whose domicile lies outside the United States and its territories must be represented at the USPTO by an attorney licensed in a U.S. state or territory. The requirement is codified at 37 C.F.R. 2.11, and it reaches everything: new applications, maintenance and renewal filings for existing registrations, and oppositions and cancellations before the Board. It applies whatever the filing basis, whether use in commerce under Section 1(a), intent to use under Section 1(b), a home-country registration under Section 44(e), or an international registration extended to the United States under Section 66(a). This is the USPTO attorney requirement for foreign applicants, and an applicant who ignores it does not save money. That applicant simply files an application that cannot proceed.</p>
 
-      <h2>Who counts as foreign-domiciled</h2>
+      <h2 id="who-counts-as-foreign-domiciled">Who counts as foreign-domiciled</h2>
       <p>Domicile is the operative word, and the USPTO defines it more narrowly than most applicants expect. For an individual, domicile is the place the person resides and intends to be a principal home. For a company, it is the principal place of business: the headquarters where the officers or senior executives actually direct and control the business. A company organized abroad that sells heavily into the United States is still foreign-domiciled. So is a Delaware LLC whose owner runs it from Shenzhen, London, or São Paulo, because a company's domicile is where it is directed, not where it was formed.</p>
       <p>The Office polices the address on record. A post office box, a mail-forwarding service, a registered-agent address, or an address given in care of someone else does not establish U.S. domicile, and examining attorneys are authorized to demand documentary proof when an address looks like a mailbox rather than a home or a headquarters. Listing a borrowed U.S. address to dodge the rule is not a loophole. It is a misrepresentation in a federal filing, and the USPTO has shown every willingness to sanction it.</p>
       <p>The counsel side of the rule is broader than many foreign applicants assume. Any attorney who is an active member in good standing of the bar of any U.S. state, commonwealth, territory, or the District of Columbia qualifies. Trademark prosecution is federal practice, so the attorney's state of licensure does not need to match anything about the applicant or the goods. A Canadian trademark attorney or agent may be recognized in a limited additional role for a Canadian client, but a qualified U.S. attorney must still be appointed, and only the U.S. attorney corresponds with the Office and signs the responses.</p>
 
-      <h2>Why the USPTO adopted it in 2019</h2>
+      <h2 id="why-the-uspto-adopted-it-in-2019">Why the USPTO adopted it in 2019</h2>
       <p>Through the late 2010s the USPTO absorbed an enormous surge of applications from overseas, most of them unrepresented. Too many arrived with doctored specimens, mock-ups presented as real product photos, and claims of use that no one had verified. The federal register is a public resource: every inaccurate registration on it blocks honest applicants during clearance and weakens the value of every legitimate mark. At the same time, foreign filing agencies with no license anywhere in the United States were preparing and prosecuting applications in bulk, which is the unauthorized practice of law before the Office.</p>
       <p>The agency's answer was structural. Require a licensed U.S. attorney, answerable to a state bar and to the USPTO's own rules of professional conduct, on every foreign-domiciled file, and the accuracy problem acquires a responsible human with something to lose. The rule also brought the United States into line with much of the world; a large share of trademark offices abroad have long required foreign applicants to act through local counsel, and American applicants filing overseas comply with those rules every day.</p>
       <p>The years since have shown the Office means it. The USPTO has issued show-cause and sanctions orders against filing schemes that circumvented the rule, terminated tens of thousands of applications that carried unauthorized or fabricated attorney information, and excluded attorneys who lent their signatures to high-volume mills without genuinely reviewing the work. The requirement is treated as an integrity measure, not a formality.</p>
 
-      <h2>What happens to an application filed without counsel</h2>
+      <h2 id="what-happens-to-an-application-filed-without-counsel">What happens to an application filed without counsel</h2>
       <p>An application filed directly by a foreign-domiciled applicant without U.S. counsel is not rejected at the door. It is examined, and the examining attorney issues an Office Action requiring the appointment of a qualified U.S. attorney, alongside whatever substantive refusals the application has earned on its own, a Section 2(d) likelihood of confusion refusal or an identification requirement being the usual companions. The response deadline is strict and short, and an application that misses it goes abandoned.</p>
       <p>The cure is appointment, and only appointment. The response itself must come from the newly appointed U.S. attorney; a response signed by the foreign applicant personally does not satisfy the requirement, however complete its arguments. This is where <a href="/services/office-action-responses/">Office Action response work</a> and the counsel requirement usually meet: the appointed attorney answers the counsel requirement and the substantive refusals in a single, properly signed filing.</p>
       <p>The worse outcomes belong to applicants who tried to route around the rule. Applications carrying attorney information the named attorney never authorized, or a false U.S. domicile address, have been terminated by sanctions order rather than merely refused, and money already paid to the USPTO stays paid. An abandoned or terminated application also surrenders its filing date, which is often the most valuable thing it had.</p>
 
-      <h2>Madrid filings: the exception that is not really one</h2>
+      <h2 id="madrid-filings-the-exception-that-is-not-really-one">Madrid filings: the exception that is not really one</h2>
       <p>Requests for extension of protection under Section 66(a) reach the USPTO through the International Bureau in Geneva, so there is no U.S. filing moment at which counsel can be demanded up front. If examination turns up no ground for refusal at all, the extension can proceed to registration without a U.S. attorney ever appearing. That is the whole exception, and it is thinner than it sounds, because a large share of applications do not clear examination untouched.</p>
       <p>The moment a provisional refusal issues, the counsel requirement arrives with it. The representative recorded at WIPO cannot respond to the USPTO, whatever their standing at home. The refusal must be answered by a U.S.-licensed attorney, appointed for the purpose, within the same strict deadline that governs any other Office Action. Foreign holders and their home-country counsel who plan for this in advance, rather than discovering it inside the response window, keep their options open. Answering these refusals is the core of our <a href="/services/madrid-protocol-refusals/">Madrid Protocol refusal practice</a>.</p>
 
-      <h2>How to comply, cleanly</h2>
+      <h2 id="how-to-comply-cleanly">How to comply, cleanly</h2>
       <p>Compliance is not complicated. It is simply earlier and more substantive than most foreign applicants expect.</p>
       <ul>
         <li><strong>Appoint counsel before filing, not after refusal.</strong> An attorney who runs the clearance search, tightens the identification of goods, and vets the specimen before submission prevents the refusals a late-appointed attorney can only argue about. This is what a properly built <a href="/services/us-trademark-registration/">U.S. trademark registration engagement</a> looks like.</li>
@@ -104,27 +149,67 @@
         <li><strong>Keep the relationship alive after registration.</strong> Maintenance and renewal filings by a foreign-domiciled registrant need U.S. counsel too, and USPTO correspondence flows through the attorney of record.</li>
       </ul>
 
-      <h2>For foreign firms and agents</h2>
+      <h2 id="for-foreign-firms-and-agents">For foreign firms and agents</h2>
       <p>Nothing in 37 C.F.R. 2.11 takes the client away from the trademark attorney or agent who handles the home portfolio. It requires a U.S. attorney for the U.S. leg, and the workable structure is associate counsel: the foreign firm keeps the relationship and the strategy, and U.S. counsel signs, files, and answers the USPTO. We built a standing arrangement for exactly this, described on our page <a href="/for-firms/">for firms and foreign agents</a>.</p>
 
       <p>If you are filing into the United States, holding a refusal that requires U.S. counsel, or a foreign firm looking for a reliable U.S. correspondent, <a class="gold" href="/contact/">write to the firm</a> and we will give you a straight answer on where your matter stands.</p>
 
-      <p style="font-size:13.5px;color:#6E747D">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
+      <p style="font-size:13.5px;color:#8F959D">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
     </article>
+        <div class="author-card">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+        <div>
+          <span class="label">About the author</span>
+          <p class="author-name">Nicholas K. Harris, Esq.</p>
+          <p class="author-role">Principal and Counsel of Record, Crown Hudson Law Firm PLLC. Admitted in New York, 2011.</p>
+          <a href="/counsel/">About the counsel.</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <section class="related" aria-labelledby="related-h">
+      <div class="sec-kicker reveal"><span class="tick"></span><h2 class="label" id="related-h">Further reading</h2></div>
+      <div class="cardlink-grid">
+        <a class="cardlink" href="/insights/uspto-office-action-guide/">
+          <h3>The USPTO Office Action, Explained</h3>
+          <p>Refusals versus requirements, how to read the letter, and when to argue, amend, or walk away.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/likelihood-of-confusion-2d/">
+          <h3>Likelihood of Confusion: How Section 2(d) Refusals Work</h3>
+          <p>The factors in plain language, the arguments that move examining attorneys, and consent agreement basics.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/descriptiveness-refusals-2e/">
+          <h3>Merely Descriptive? The Section 2(e) Refusal Family</h3>
+          <p>The distinctiveness spectrum, the 2(e) refusal family, acquired distinctiveness, and the Supplemental Register.</p>
+          <span class="go">Read the article</span>
+        </a>
+      </div>
+    </section>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="fbrand">
-      <span class="mark"></span>
-      <span class="serif name">Crown Hudson Law</span>
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg class="emblem emblem-md" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+          <span class="serif name">Crown Hudson Law</span>
+        </div>
+        <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
+      </div>
+      <nav class="fnav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+      <div>
+        <div class="label adv">Attorney Advertising</div>
+        <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+        <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+      </div>
     </div>
-    <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
-    <div class="fnav"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
-    <div class="label adv">Attorney Advertising</div>
-    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
-    <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+    <div class="fword" aria-hidden="true">Crown Hudson</div>
   </div>
 </footer>
 

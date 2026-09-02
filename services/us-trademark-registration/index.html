@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
@@ -32,21 +33,41 @@
   "url": "https://crownhudsonlaw.com/services/us-trademark-registration/"
 }
 </script>
+<script src="/site.js" defer></script>
 </head>
-<body>
+<body class="p-service">
 
 <div class="hairline"></div>
 
-<div style="position:relative">
-  <div class="atmo"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site-top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="ch-hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3.2" stroke="currentColor" stroke-width=".55" opacity=".5"/></pattern><pattern id="ch-hatch-fine" width="1.15" height="1.15" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.15" stroke="currentColor" stroke-width=".5" opacity=".42" vector-effect="non-scaling-stroke"/></pattern><symbol id="ch-emblem" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="l1" vector-effect="non-scaling-stroke" d="M22 78V46l22 16 16-32 16 32 22-16v32z"/>
+<path class="l2" vector-effect="non-scaling-stroke" d="M22 78h76v10H22z"/>
+</g>
+<g class="hatch" fill="url(#ch-hatch)" stroke="none">
+<path d="M22 78h76v10H22z"/>
+<path d="M22 78V46l22 16 16-32 16 32 22-16v32z" opacity=".45"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path class="l2" vector-effect="non-scaling-stroke" d="M60 58l6 8-6 8-6-8z"/>
+<circle class="l1" vector-effect="non-scaling-stroke" cx="22" cy="46" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="60" cy="30" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="98" cy="46" r="3"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round">
+<path class="l3" vector-effect="non-scaling-stroke" stroke-width="1.3" d="M12 99c16-7 28 5 46-1s30-9 50 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".6" d="M18 107c16-7 28 5 44-1s26-8 44 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1" opacity=".32" d="M26 115c14-6 24 4 38-1s22-7 36 0"/>
+</g></symbol></defs></svg>
   <div class="wrap">
     <header class="site">
-      <a class="brand" href="/">
-        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.5" stroke="#C9A45E" stroke-width="1"/><path d="M24 12 L33.5 24 L24 36 L14.5 24 Z" stroke="#C9A45E" stroke-width="1"/><path d="M24 17 L24 31" stroke="#C9A45E" stroke-width="0.8" opacity="0.75"/></svg>
+      <a class="brand" href="/" aria-label="Crown Hudson Law, home">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
         <span class="serif">Crown Hudson Law</span>
       </a>
-      <nav class="top">
-        <a href="/services/" class="on">Services</a>
+      <a class="nav-toggle" href="#site-nav" data-nav-toggle><span class="nav-toggle-bars" aria-hidden="true"></span><span>Menu</span></a>
+      <nav class="top" id="site-nav" aria-label="Primary">
+        <a class="nav-close" href="#" data-nav-close>Close</a>
+        <a href="/services/" class="on" aria-current="page">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/for-firms/">For firms</a>
         <a href="/counsel/">Counsel</a>
@@ -56,6 +77,14 @@
         <span class="pill"><span class="dot"></span>Launching soon</span>
       </nav>
     </header>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-top" style="position:relative">
+  <div class="atmo"></div>
+  <svg class="wm-emblem hero-wm" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+  <div class="wrap">
 
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/services/">Services</a><span class="sep">/</span>U.S. registration</div>
 
@@ -68,6 +97,70 @@
       <div class="goldrule"></div>
       <p class="it lede">From clearance search through examination, handled by U.S.-licensed counsel, on one flat fee quoted in writing.</p>
     </section>
+
+    <figure class="diagram reveal" data-diagram="reg">
+<svg class="d-wide" viewBox="0 0 760 182" role="img" aria-labelledby="dg-reg-wide-t" focusable="false">
+<title id="dg-reg-wide-t">Diagram of the U.S. trademark registration life cycle: clearance, filing, examination, publication, registration, with any Office Action answered during examination.</title>
+<defs><marker id="dg-reg-wide-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" class="ah"/></marker></defs>
+<path class="e" d="M134 45 L161 45" marker-end="url(#dg-reg-wide-ah)"/>
+<path class="e" d="M289 45 L316 45" marker-end="url(#dg-reg-wide-ah)"/>
+<path class="e" d="M444 45 L471 45" marker-end="url(#dg-reg-wide-ah)"/>
+<path class="e" d="M599 45 L626 45" marker-end="url(#dg-reg-wide-ah)"/>
+<path class="e" d="M360 72 L360 110" marker-end="url(#dg-reg-wide-ah)"/>
+<path class="e" d="M400 110 L400 72" marker-end="url(#dg-reg-wide-ah)"/>
+<text class="el" x="407" y="95">response</text>
+<g><rect class="n" x="6" y="18" width="128" height="54" rx="2"/>
+<text x="70" y="49.5" text-anchor="middle">Clearance</text>
+</g>
+<g><rect class="n" x="161" y="18" width="128" height="54" rx="2"/>
+<text x="225" y="49.5" text-anchor="middle">Filing</text>
+</g>
+<g><rect class="n hot" x="316" y="18" width="128" height="54" rx="2"/>
+<text class="hot" x="380" y="49.5" text-anchor="middle">Examination</text>
+</g>
+<g><rect class="n" x="471" y="18" width="128" height="54" rx="2"/>
+<text x="535" y="49.5" text-anchor="middle">Publication</text>
+</g>
+<g><rect class="n end" x="626" y="18" width="128" height="54" rx="2"/>
+<rect class="n2" x="629.5" y="21.5" width="121" height="47" rx="1"/>
+<text x="690" y="49.5" text-anchor="middle">Registration</text>
+</g>
+<g><rect class="n" x="316" y="110" width="128" height="54" rx="2"/>
+<text x="380" y="141.5" text-anchor="middle">Office Action</text>
+</g>
+</svg>
+<svg class="d-tall" viewBox="0 0 340 436" role="img" aria-labelledby="dg-reg-tall-t" focusable="false">
+<title id="dg-reg-tall-t">Diagram of the U.S. trademark registration life cycle: clearance, filing, examination, publication, registration, with any Office Action answered during examination.</title>
+<defs><marker id="dg-reg-tall-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5 0 10z" class="ah"/></marker></defs>
+<path class="e" d="M83 68 L83 104" marker-end="url(#dg-reg-tall-ah)"/>
+<path class="e" d="M83 156 L83 192" marker-end="url(#dg-reg-tall-ah)"/>
+<path class="e" d="M83 244 L83 280" marker-end="url(#dg-reg-tall-ah)"/>
+<path class="e" d="M83 332 L83 368" marker-end="url(#dg-reg-tall-ah)"/>
+<path class="e" d="M158 204 L182 204" marker-end="url(#dg-reg-tall-ah)"/>
+<path class="e" d="M182 232 L158 232" marker-end="url(#dg-reg-tall-ah)"/>
+<text class="el" x="170" y="247" text-anchor="middle">response</text>
+<g><rect class="n" x="8" y="16" width="150" height="52" rx="2"/>
+<text x="83" y="46.5" text-anchor="middle">Clearance</text>
+</g>
+<g><rect class="n" x="8" y="104" width="150" height="52" rx="2"/>
+<text x="83" y="134.5" text-anchor="middle">Filing</text>
+</g>
+<g><rect class="n hot" x="8" y="192" width="150" height="52" rx="2"/>
+<text class="hot" x="83" y="222.5" text-anchor="middle">Examination</text>
+</g>
+<g><rect class="n" x="8" y="280" width="150" height="52" rx="2"/>
+<text x="83" y="310.5" text-anchor="middle">Publication</text>
+</g>
+<g><rect class="n end" x="8" y="368" width="150" height="52" rx="2"/>
+<rect class="n2" x="11.5" y="371.5" width="143" height="45" rx="1"/>
+<text x="83" y="398.5" text-anchor="middle">Registration</text>
+</g>
+<g><rect class="n" x="182" y="192" width="150" height="52" rx="2"/>
+<text x="257" y="222.5" text-anchor="middle">Office Action</text>
+</g>
+</svg>
+<figcaption class="d-caption"><span class="label">The registration life cycle</span><span>The stages a U.S. application passes through. An Office Action, when one issues, is answered during examination.</span></figcaption>
+</figure>
 
     <article class="prose">
       <h2>Why foreign applicants need U.S. counsel</h2>
@@ -91,18 +184,26 @@
     </article>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="fbrand">
-      <span class="mark"></span>
-      <span class="serif name">Crown Hudson Law</span>
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg class="emblem emblem-md" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+          <span class="serif name">Crown Hudson Law</span>
+        </div>
+        <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
+      </div>
+      <nav class="fnav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+      <div>
+        <div class="label adv">Attorney Advertising</div>
+        <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+        <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+      </div>
     </div>
-    <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
-    <div class="fnav"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
-    <div class="label adv">Attorney Advertising</div>
-    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
-    <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+    <div class="fword" aria-hidden="true">Crown Hudson</div>
   </div>
 </footer>
 

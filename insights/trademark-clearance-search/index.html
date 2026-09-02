@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
@@ -33,29 +34,58 @@
   "mainEntityOfPage": "https://crownhudsonlaw.com/insights/trademark-clearance-search/"
 }
 </script>
+<script src="/site.js" defer></script>
 </head>
-<body>
+<body class="p-article">
 
 <div class="hairline"></div>
 
-<div style="position:relative">
-  <div class="atmo"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site-top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="ch-hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3.2" stroke="currentColor" stroke-width=".55" opacity=".5"/></pattern><pattern id="ch-hatch-fine" width="1.15" height="1.15" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.15" stroke="currentColor" stroke-width=".5" opacity=".42" vector-effect="non-scaling-stroke"/></pattern><symbol id="ch-emblem" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="l1" vector-effect="non-scaling-stroke" d="M22 78V46l22 16 16-32 16 32 22-16v32z"/>
+<path class="l2" vector-effect="non-scaling-stroke" d="M22 78h76v10H22z"/>
+</g>
+<g class="hatch" fill="url(#ch-hatch)" stroke="none">
+<path d="M22 78h76v10H22z"/>
+<path d="M22 78V46l22 16 16-32 16 32 22-16v32z" opacity=".45"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path class="l2" vector-effect="non-scaling-stroke" d="M60 58l6 8-6 8-6-8z"/>
+<circle class="l1" vector-effect="non-scaling-stroke" cx="22" cy="46" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="60" cy="30" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="98" cy="46" r="3"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round">
+<path class="l3" vector-effect="non-scaling-stroke" stroke-width="1.3" d="M12 99c16-7 28 5 46-1s30-9 50 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".6" d="M18 107c16-7 28 5 44-1s26-8 44 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1" opacity=".32" d="M26 115c14-6 24 4 38-1s22-7 36 0"/>
+</g></symbol></defs></svg>
   <div class="wrap">
     <header class="site">
-      <a class="brand" href="/">
-        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.5" stroke="#C9A45E" stroke-width="1"/><path d="M24 12 L33.5 24 L24 36 L14.5 24 Z" stroke="#C9A45E" stroke-width="1"/><path d="M24 17 L24 31" stroke="#C9A45E" stroke-width="0.8" opacity="0.75"/></svg>
+      <a class="brand" href="/" aria-label="Crown Hudson Law, home">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
         <span class="serif">Crown Hudson Law</span>
       </a>
-      <nav class="top">
+      <a class="nav-toggle" href="#site-nav" data-nav-toggle><span class="nav-toggle-bars" aria-hidden="true"></span><span>Menu</span></a>
+      <nav class="top" id="site-nav" aria-label="Primary">
+        <a class="nav-close" href="#" data-nav-close>Close</a>
         <a href="/services/">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/for-firms/">For firms</a>
         <a href="/counsel/">Counsel</a>
+        <a href="/insights/" class="on" aria-current="page">Insights</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">Contact</a>
         <span class="pill"><span class="dot"></span>Launching soon</span>
       </nav>
     </header>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-top" style="position:relative">
+  <div class="atmo"></div>
+  <svg class="wm-emblem hero-wm" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+  <div class="wrap">
 
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/insights/">Insights</a><span class="sep">/</span>Clearance Before Filing: What a Real Trademark Search Looks At</div>
 
@@ -69,29 +99,42 @@
       <p class="it lede">The most expensive trademark problems are the ones that were visible before the application was filed.</p>
     </section>
 
-    <div class="label">By Nicholas K. Harris, Esq. · September 2026</div>
-
-    <article class="prose">
-      <h2>Two different things are called a trademark search</h2>
+    <div class="article-grid">
+      <aside class="article-rail">
+        <div class="byline"><svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg><div class="label">By Nicholas K. Harris, Esq. · September 2026</div></div>
+        <nav class="toc" aria-labelledby="toc-h">
+          <h2 class="toc-h" id="toc-h">Contents</h2>
+          <ol>
+          <li><a href="#two-different-things-are-called-a-trademark-search">Two different things are called a trademark search</a></li>
+          <li><a href="#why-searching-for-identical-hits-misses-the-real-risks">Why searching for identical hits misses the real risks</a></li>
+          <li><a href="#what-likelihood-of-confusion-screening-involves">What likelihood-of-confusion screening involves</a></li>
+          <li><a href="#the-cost-asymmetry-of-skipping-clearance">The cost asymmetry of skipping clearance</a></li>
+          <li><a href="#what-a-careful-clearance-process-looks-like">What a careful clearance process looks like</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <div class="article-main">
+        <article class="prose">
+      <h2 id="two-different-things-are-called-a-trademark-search">Two different things are called a trademark search</h2>
       <p>Every filing service says it searches before it files. The word covers two very different exercises, and the difference decides what the search can actually tell you about your mark's chances.</p>
       <p>A <strong>knockout search</strong> is a fast screen of the federal register: live registrations and pending applications, checked for marks identical or confusingly close to yours on related goods or services. Its job is to kill doomed candidates early, before money and attachment accumulate around a name that a registered mark already blocks. Every application we prepare through our <a class="gold" href="/services/us-trademark-registration/">U.S. trademark registration service</a> starts with one, because filing without it is filing blind.</p>
       <p>A <strong>comprehensive clearance search</strong> goes much further. It covers the federal register, including earlier-filed pending applications and extensions of protection that reach the United States under Section 66(a) of the Lanham Act. It covers state trademark registrations. Most importantly, it covers common-law use: business names, domain names, marketplace storefronts, trade publications, anywhere a competitor may be using a mark it never registered.</p>
       <p>The common-law layer matters because United States trademark rights come from use, not only from registration. A company that never filed anything with the USPTO can still hold enforceable rights in its trading area, oppose your application, or send the demand letter that forces a rebrand. A register-only search is silent about every one of those parties.</p>
       <p>Which search a project needs is a judgment about stakes. A working name for a small side project can reasonably proceed on a knockout search alone. A name going onto packaging, a national campaign, or investor documents deserves the comprehensive treatment, because the cost of being wrong scales with everything built on top of the name.</p>
 
-      <h2>Why searching for identical hits misses the real risks</h2>
+      <h2 id="why-searching-for-identical-hits-misses-the-real-risks">Why searching for identical hits misses the real risks</h2>
       <p>Most applicants search the way they shop: type the exact name into the USPTO's public database, see no identical match, and conclude the name is available. That conclusion rests on a misunderstanding of the legal standard.</p>
       <p>Section 2(d) of the Lanham Act directs the USPTO to refuse registration when a mark so resembles a registered mark that confusion is likely, and an earlier-filed application that would conflict puts yours on hold until it registers or dies. Resemblance, not identity, is the test. The examining attorney assigned to your application will run structured queries built from truncated word stems, phonetic equivalents, and design search codes. KWIK can block QUICK. Two marks spelled nothing alike can collide because they sound alike or share a dominant element. Under the doctrine of foreign equivalents, a foreign word may be compared through its English translation, so LOBO and WOLF can end up on a collision course for related goods.</p>
       <p>The comparison also runs across goods and services, not just across words. Confusion is judged on whether consumers would expect the goods to come from the same source, and related goods in different classes are compared against each other all the time. Classification is an administrative filing convention, not a fence around anyone's rights, and "my class was clear" is one of the most common false comforts in trademark practice.</p>
       <p>Timing hides a further trap. An application filed months before yours and still waiting for examination is invisible to a casual availability check, yet it can be cited against you when its turn comes. So can a Madrid Protocol extension that arrived on the U.S. register from a foreign filing; our <a class="gold" href="/services/madrid-protocol-refusals/">Madrid Protocol refusal work</a> sees these collisions from both sides.</p>
 
-      <h2>What likelihood-of-confusion screening involves</h2>
+      <h2 id="what-likelihood-of-confusion-screening-involves">What likelihood-of-confusion screening involves</h2>
       <p>A search report is raw material. Screening it means reading every arguably relevant hit the way an examining attorney would, through the factors courts and the USPTO use to judge likelihood of confusion: the marks' similarity in appearance, sound, meaning, and overall commercial impression; the relatedness of the goods and services; the channels through which they travel; the care buyers exercise; and the strength of the marks already on the register.</p>
       <p>That last factor changes outcomes more than applicants expect. In a crowded field, where dozens of registrations share a common element, each mark is weak and small differences are enough to distinguish yours. Around a coined, distinctive mark, the zone of protection is wide, and even a loose resemblance can draw a refusal. The same hit can be a fatal problem in one field and background noise in another, and only the surrounding register tells you which.</p>
       <p>This is why the useful output of clearance is not a list of hits but a risk read: which references actually matter, what the examining attorney is likely to cite, what an opposition might look like, and how strong the arguments on each side would be. It is legal judgment applied to search results, which is also why a clearance opinion is attorney work rather than a database subscription.</p>
       <p>No search eliminates risk. Common-law users may leave no searchable trace, an application filed the day after your search can still be cited, and reasonable examining attorneys differ. Clearance is not a promise of smooth passage. It is the difference between filing with your eyes open, at odds you understood and accepted, and filing on hope.</p>
 
-      <h2>The cost asymmetry of skipping clearance</h2>
+      <h2 id="the-cost-asymmetry-of-skipping-clearance">The cost asymmetry of skipping clearance</h2>
       <p>Clearance is usually the least expensive step in the registration process, and it is the step whose absence multiplies the cost of every step after it. The arithmetic runs one way only:</p>
       <ul>
         <li><strong>Filing fees are sunk.</strong> Government fees are paid per class when the application is filed, and they are not refunded when the application is refused.</li>
@@ -103,7 +146,7 @@
       <p>Set against that list, a proper trademark clearance search before filing costs a small fraction of any single one of those outcomes. Skipping it does not avoid the question of whether the mark is available; it moves the question to a later date, a higher price, and a worse negotiating position.</p>
       <p>For foreign-domiciled applicants the sequence matters even more. Under 37 C.F.R. 2.11 they must be represented before the USPTO by a U.S.-licensed attorney in any event, so the practical choice is when counsel gets involved: before filing, while a search can still redirect the application, or after a refusal, when the options have already narrowed.</p>
 
-      <h2>What a careful clearance process looks like</h2>
+      <h2 id="what-a-careful-clearance-process-looks-like">What a careful clearance process looks like</h2>
       <p>The process that works is unglamorous:</p>
       <ul>
         <li>Start with several candidate names, not one. Attachment to a single name is the most common way businesses talk themselves past bad search results.</li>
@@ -114,22 +157,62 @@
       </ul>
       <p>That honest read is the point of hiring counsel for this step. A search vendor sells you a report. An attorney tells you what the report means and, when the answer is "pick a different name," says so before the filing fee is spent.</p>
       <p>If you are weighing a name now, or holding a search report you are not sure how to read, <a class="gold" href="/contact/">write to the firm</a>. Questions asked before filing are the inexpensive kind.</p>
-      <p style="font-size:13px;color:#666B74;line-height:1.64">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
+      <p style="font-size:13px;color:#8B9199;line-height:1.64">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
     </article>
+        <div class="author-card">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+        <div>
+          <span class="label">About the author</span>
+          <p class="author-name">Nicholas K. Harris, Esq.</p>
+          <p class="author-role">Principal and Counsel of Record, Crown Hudson Law Firm PLLC. Admitted in New York, 2011.</p>
+          <a href="/counsel/">About the counsel.</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <section class="related" aria-labelledby="related-h">
+      <div class="sec-kicker reveal"><span class="tick"></span><h2 class="label" id="related-h">Further reading</h2></div>
+      <div class="cardlink-grid">
+        <a class="cardlink" href="/insights/trademark-classes-identifications/">
+          <h3>Trademark Classes and Identifications: Getting the Scope Right</h3>
+          <p>The ID Manual, multi-class strategy, and the overbreadth traps that catch foreign filers.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/amazon-brand-registry-trademarks/">
+          <h3>Amazon Brand Registry and Your U.S. Trademark</h3>
+          <p>What Brand Registry requires, the counsel rule for foreign sellers, and why shortcuts around that rule cost sellers their brands.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/us-trademark-application-timeline/">
+          <h3>The Life of a U.S. Trademark Application</h3>
+          <p>Filing, examination, publication, opposition, registration: every stage, and where refusals happen.</p>
+          <span class="go">Read the article</span>
+        </a>
+      </div>
+    </section>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="fbrand">
-      <span class="mark"></span>
-      <span class="serif name">Crown Hudson Law</span>
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg class="emblem emblem-md" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+          <span class="serif name">Crown Hudson Law</span>
+        </div>
+        <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
+      </div>
+      <nav class="fnav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+      <div>
+        <div class="label adv">Attorney Advertising</div>
+        <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+        <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+      </div>
     </div>
-    <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
-    <div class="fnav"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
-    <div class="label adv">Attorney Advertising</div>
-    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
-    <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+    <div class="fword" aria-hidden="true">Crown Hudson</div>
   </div>
 </footer>
 

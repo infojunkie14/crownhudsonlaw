@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
@@ -33,29 +34,58 @@
   "mainEntityOfPage": "https://crownhudsonlaw.com/insights/trademark-classes-identifications/"
 }
 </script>
+<script src="/site.js" defer></script>
 </head>
-<body>
+<body class="p-article">
 
 <div class="hairline"></div>
 
-<div style="position:relative">
-  <div class="atmo"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site-top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="ch-hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3.2" stroke="currentColor" stroke-width=".55" opacity=".5"/></pattern><pattern id="ch-hatch-fine" width="1.15" height="1.15" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.15" stroke="currentColor" stroke-width=".5" opacity=".42" vector-effect="non-scaling-stroke"/></pattern><symbol id="ch-emblem" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="l1" vector-effect="non-scaling-stroke" d="M22 78V46l22 16 16-32 16 32 22-16v32z"/>
+<path class="l2" vector-effect="non-scaling-stroke" d="M22 78h76v10H22z"/>
+</g>
+<g class="hatch" fill="url(#ch-hatch)" stroke="none">
+<path d="M22 78h76v10H22z"/>
+<path d="M22 78V46l22 16 16-32 16 32 22-16v32z" opacity=".45"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path class="l2" vector-effect="non-scaling-stroke" d="M60 58l6 8-6 8-6-8z"/>
+<circle class="l1" vector-effect="non-scaling-stroke" cx="22" cy="46" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="60" cy="30" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="98" cy="46" r="3"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round">
+<path class="l3" vector-effect="non-scaling-stroke" stroke-width="1.3" d="M12 99c16-7 28 5 46-1s30-9 50 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".6" d="M18 107c16-7 28 5 44-1s26-8 44 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1" opacity=".32" d="M26 115c14-6 24 4 38-1s22-7 36 0"/>
+</g></symbol></defs></svg>
   <div class="wrap">
     <header class="site">
-      <a class="brand" href="/">
-        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.5" stroke="#C9A45E" stroke-width="1"/><path d="M24 12 L33.5 24 L24 36 L14.5 24 Z" stroke="#C9A45E" stroke-width="1"/><path d="M24 17 L24 31" stroke="#C9A45E" stroke-width="0.8" opacity="0.75"/></svg>
+      <a class="brand" href="/" aria-label="Crown Hudson Law, home">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
         <span class="serif">Crown Hudson Law</span>
       </a>
-      <nav class="top">
+      <a class="nav-toggle" href="#site-nav" data-nav-toggle><span class="nav-toggle-bars" aria-hidden="true"></span><span>Menu</span></a>
+      <nav class="top" id="site-nav" aria-label="Primary">
+        <a class="nav-close" href="#" data-nav-close>Close</a>
         <a href="/services/">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/for-firms/">For firms</a>
         <a href="/counsel/">Counsel</a>
+        <a href="/insights/" class="on" aria-current="page">Insights</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">Contact</a>
         <span class="pill"><span class="dot"></span>Launching soon</span>
       </nav>
     </header>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-top" style="position:relative">
+  <div class="atmo"></div>
+  <svg class="wm-emblem hero-wm" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+  <div class="wrap">
 
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/insights/">Insights</a><span class="sep">/</span>Trademark Classes and Identifications: Getting the Scope Right</div>
 
@@ -69,24 +99,38 @@
       <p class="it lede">The goods and services you list under a mark decide what the registration protects, what it costs to keep, and where it can be attacked.</p>
     </section>
 
-    <p class="label" style="margin:0">By Nicholas K. Harris, Esq. &middot; September 2026</p>
-
-    <article class="prose">
-      <h2>Where the classes come from</h2>
+    <div class="article-grid">
+      <aside class="article-rail">
+        <div class="byline"><svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg><p class="label" style="margin:0">By Nicholas K. Harris, Esq. &middot; September 2026</p></div>
+        <nav class="toc" aria-labelledby="toc-h">
+          <h2 class="toc-h" id="toc-h">Contents</h2>
+          <ol>
+          <li><a href="#where-the-classes-come-from">Where the classes come from</a></li>
+          <li><a href="#the-id-manual-the-office-s-approved-vocabulary">The ID Manual: the Office's approved vocabulary</a></li>
+          <li><a href="#the-wording-is-both-the-sword-and-the-target">The wording is both the sword and the target</a></li>
+          <li><a href="#multi-class-strategy-what-each-class-has-to-earn">Multi-class strategy: what each class has to earn</a></li>
+          <li><a href="#overbreadth-the-trap-built-for-foreign-filers">Overbreadth: the trap built for foreign filers</a></li>
+          <li><a href="#getting-the-scope-right-the-first-time">Getting the scope right the first time</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <div class="article-main">
+        <article class="prose">
+      <h2 id="where-the-classes-come-from">Where the classes come from</h2>
       <p>Every U.S. trademark application has to answer two questions about scope: what goods or services the mark covers, and which international class each of them belongs to. The classes come from the Nice Agreement, the treaty-based system the USPTO has followed since 1973. There are 45 trademark classes, 34 for goods and 11 for services. Clothing sits in Class 25, downloadable software in Class 9, retail services in Class 35, software as a service in Class 42.</p>
       <p>Start with what a class is not. A class is an administrative sorting device. It sets how many government filing fees you pay, organizes the register, and gives examiners a way to search. It is not the boundary of your rights. Likelihood of confusion under Section 2(d) turns on whether the goods and services themselves are related, and related goods sit in different classes all the time: a mobile app and the online service behind it, clothing and retail stores featuring clothing.</p>
       <p>The real legal scope of a U.S. filing lives in the identification of goods and services, the exact words listed under the mark. Picking trademark classes and drafting the goods and services identification are two halves of one decision, and the words are the half that does the work.</p>
 
-      <h2>The ID Manual: the Office's approved vocabulary</h2>
+      <h2 id="the-id-manual-the-office-s-approved-vocabulary">The ID Manual: the Office's approved vocabulary</h2>
       <p>The USPTO publishes the Trademark ID Manual, a searchable database of tens of thousands of pre-approved identifications, each already assigned to its correct class. An entry taken from the Manual will not be refused as indefinite. Under the current fee structure it is also the economical route, because applications that stay within Manual entries avoid the surcharges that free-form identifications carry.</p>
       <p>Custom wording is still allowed, and for a genuinely new product it is sometimes unavoidable. But every custom identification is examined for definiteness under the standards of TMEP 1402. The test is practical: would an ordinary reader understand, from the words alone, what the goods or services actually are? "Software" fails. "Downloadable software for scheduling appointments at veterinary clinics" passes. The Manual is updated constantly, so the right first move in nearly every case is to search it hard before drafting anything from scratch.</p>
 
-      <h2>The wording is both the sword and the target</h2>
+      <h2 id="the-wording-is-both-the-sword-and-the-target">The wording is both the sword and the target</h2>
       <p>In examination and in most disputes, a registration is read on its words. When an examiner weighs your application against an earlier registration under Section 2(d), the comparison runs between the two identifications as written, not between what the parties actually sell. Broad words in a cited registration block broadly. The same breadth in your own registration is what makes it a wall against later filers.</p>
       <p>After registration, breadth cuts the other way. The United States is a use-based system. Section 8 and Section 71 maintenance declarations require a sworn statement that the mark is in use on everything still listed, the USPTO audits a share of those declarations and demands proof for items it selects, and any listed item not in use is an opening for a nonuse cancellation at the Trademark Trial and Appeal Board, or for an expungement or reexamination petition at the USPTO under the Trademark Modernization Act. A knowingly false statement of use is worse: it exposes the entire registration to a fraud attack.</p>
       <p>One rule makes the first draft decisive. Under 37 C.F.R. 2.71(a), an identification may be clarified or narrowed after filing, never broadened. Leave a product out and there is no fixing it in that application; the cure is a new filing with a new date. Get an item's wording wrong and the correction must fit inside the original language. That is why identification and classification requirements are among the most common grounds for Office Actions, and why <a href="/services/office-action-responses/">answering one well</a> is often a matter of amending with a scalpel rather than arguing.</p>
 
-      <h2>Multi-class strategy: what each class has to earn</h2>
+      <h2 id="multi-class-strategy-what-each-class-has-to-earn">Multi-class strategy: what each class has to earn</h2>
       <p>Filing fees run per class, and so does everything after: each class needs its own proof of use, survives or fails its own audit, and carries its own share of every maintenance filing for the life of the registration. A class is a recurring commitment, not a checkbox, so every class in an application has to earn its place.</p>
       <p>The questions that decide it:</p>
       <ul>
@@ -97,30 +141,70 @@
       </ul>
       <p>A tight filing that registers cleanly and survives its maintenance windows is worth more than a sprawling one that draws refusals now and deletions later. When a new product line becomes real, a new application can follow it. Scoping is the first substantive work in every <a href="/services/us-trademark-registration/">U.S. trademark registration</a> matter we take.</p>
 
-      <h2>Overbreadth: the trap built for foreign filers</h2>
+      <h2 id="overbreadth-the-trap-built-for-foreign-filers">Overbreadth: the trap built for foreign filers</h2>
       <p>Most of the world does not test use before registration. In the European Union, the United Kingdom, China, and many other systems, applicants routinely claim class headings or long lists of goods they may never sell, and nothing pushes back for years. Filers bring that habit to the USPTO, and U.S. practice is arranged, at every stage, to punish it.</p>
       <p>The collision is sharpest in Madrid Protocol extensions under Section 66(a). The identification arrives written for a home registry, the U.S. examiner refuses its broad terms as indefinite, and the room to cure is narrow: in a Section 66(a) application the classification assigned by the International Bureau is fixed, goods cannot move between classes, and no amendment may reach beyond the scope of the international registration. Wording that sailed through dozens of member states can be genuinely hard to salvage in the United States, on a strict deadline that cannot be extended, and only through U.S. counsel, since a foreign-domiciled applicant must be represented by a U.S.-licensed attorney under 37 C.F.R. 2.11. Provisional refusals on identification grounds are the daily material of our <a href="/services/madrid-protocol-refusals/">Madrid Protocol refusal practice</a>.</p>
       <p>The trap does not close at registration. A mark registered through Madrid, or on a home-country registration under Section 44(e), can issue without any U.S. use at all. The maintenance declarations still come due, they still demand use on everything listed, and the audit program exists to test long lists exactly like these. Every imported item never sold in the United States is a deletion waiting to happen, and a declaration signed carelessly over such a list is the raw material of a fraud claim. The overbroad identification that felt free on filing day is often the most expensive line in the file ten years on.</p>
 
-      <h2>Getting the scope right the first time</h2>
+      <h2 id="getting-the-scope-right-the-first-time">Getting the scope right the first time</h2>
       <p>The habits that hold up: search the ID Manual before drafting, write to the definiteness standard, claim the classes the business actually occupies, list nothing you cannot prove or honestly intend, and treat the identification on filing day as the ceiling it is. Scope can always be narrowed later. It can never be raised.</p>
       <p>If you are weighing classes for a planned filing, or holding a refusal that turns on identification wording, we are glad to look at it. <a class="gold" href="/contact/">Write to the firm.</a></p>
-      <p style="font-size:13px;color:#666B74">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
+      <p style="font-size:13px;color:#8B9199">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
     </article>
+        <div class="author-card">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+        <div>
+          <span class="label">About the author</span>
+          <p class="author-name">Nicholas K. Harris, Esq.</p>
+          <p class="author-role">Principal and Counsel of Record, Crown Hudson Law Firm PLLC. Admitted in New York, 2011.</p>
+          <a href="/counsel/">About the counsel.</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <section class="related" aria-labelledby="related-h">
+      <div class="sec-kicker reveal"><span class="tick"></span><h2 class="label" id="related-h">Further reading</h2></div>
+      <div class="cardlink-grid">
+        <a class="cardlink" href="/insights/amazon-brand-registry-trademarks/">
+          <h3>Amazon Brand Registry and Your U.S. Trademark</h3>
+          <p>What Brand Registry requires, the counsel rule for foreign sellers, and why shortcuts around that rule cost sellers their brands.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/us-trademark-application-timeline/">
+          <h3>The Life of a U.S. Trademark Application</h3>
+          <p>Filing, examination, publication, opposition, registration: every stage, and where refusals happen.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/trademark-application-refused-options/">
+          <h3>Your Application Was Refused. Now What?</h3>
+          <p>How to read the refusal, the five realistic paths forward, and telling a winnable fight from a bad one.</p>
+          <span class="go">Read the article</span>
+        </a>
+      </div>
+    </section>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="fbrand">
-      <span class="mark"></span>
-      <span class="serif name">Crown Hudson Law</span>
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg class="emblem emblem-md" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+          <span class="serif name">Crown Hudson Law</span>
+        </div>
+        <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
+      </div>
+      <nav class="fnav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+      <div>
+        <div class="label adv">Attorney Advertising</div>
+        <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+        <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+      </div>
     </div>
-    <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
-    <div class="fnav"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
-    <div class="label adv">Attorney Advertising</div>
-    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
-    <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+    <div class="fword" aria-hidden="true">Crown Hudson</div>
   </div>
 </footer>
 

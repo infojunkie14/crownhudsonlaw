@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
@@ -33,29 +34,58 @@
   "mainEntityOfPage": "https://crownhudsonlaw.com/insights/likelihood-of-confusion-2d/"
 }
 </script>
+<script src="/site.js" defer></script>
 </head>
-<body>
+<body class="p-article">
 
 <div class="hairline"></div>
 
-<div style="position:relative">
-  <div class="atmo"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site-top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="ch-hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3.2" stroke="currentColor" stroke-width=".55" opacity=".5"/></pattern><pattern id="ch-hatch-fine" width="1.15" height="1.15" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.15" stroke="currentColor" stroke-width=".5" opacity=".42" vector-effect="non-scaling-stroke"/></pattern><symbol id="ch-emblem" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="l1" vector-effect="non-scaling-stroke" d="M22 78V46l22 16 16-32 16 32 22-16v32z"/>
+<path class="l2" vector-effect="non-scaling-stroke" d="M22 78h76v10H22z"/>
+</g>
+<g class="hatch" fill="url(#ch-hatch)" stroke="none">
+<path d="M22 78h76v10H22z"/>
+<path d="M22 78V46l22 16 16-32 16 32 22-16v32z" opacity=".45"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path class="l2" vector-effect="non-scaling-stroke" d="M60 58l6 8-6 8-6-8z"/>
+<circle class="l1" vector-effect="non-scaling-stroke" cx="22" cy="46" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="60" cy="30" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="98" cy="46" r="3"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round">
+<path class="l3" vector-effect="non-scaling-stroke" stroke-width="1.3" d="M12 99c16-7 28 5 46-1s30-9 50 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".6" d="M18 107c16-7 28 5 44-1s26-8 44 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1" opacity=".32" d="M26 115c14-6 24 4 38-1s22-7 36 0"/>
+</g></symbol></defs></svg>
   <div class="wrap">
     <header class="site">
-      <a class="brand" href="/">
-        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.5" stroke="#C9A45E" stroke-width="1"/><path d="M24 12 L33.5 24 L24 36 L14.5 24 Z" stroke="#C9A45E" stroke-width="1"/><path d="M24 17 L24 31" stroke="#C9A45E" stroke-width="0.8" opacity="0.75"/></svg>
+      <a class="brand" href="/" aria-label="Crown Hudson Law, home">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
         <span class="serif">Crown Hudson Law</span>
       </a>
-      <nav class="top">
+      <a class="nav-toggle" href="#site-nav" data-nav-toggle><span class="nav-toggle-bars" aria-hidden="true"></span><span>Menu</span></a>
+      <nav class="top" id="site-nav" aria-label="Primary">
+        <a class="nav-close" href="#" data-nav-close>Close</a>
         <a href="/services/">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/for-firms/">For firms</a>
         <a href="/counsel/">Counsel</a>
+        <a href="/insights/" class="on" aria-current="page">Insights</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">Contact</a>
         <span class="pill"><span class="dot"></span>Launching soon</span>
       </nav>
     </header>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-top" style="position:relative">
+  <div class="atmo"></div>
+  <svg class="wm-emblem hero-wm" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+  <div class="wrap">
 
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/insights/">Insights</a><span class="sep">/</span>Likelihood of Confusion: How Section 2(d) Refusals Work</div>
 
@@ -69,14 +99,31 @@
       <p class="it lede">Two marks, one marketplace, and an examiner asking a single question: would buyers believe these come from the same place?</p>
     </section>
 
-    <div class="label">By Nicholas K. Harris, Esq. · September 2026</div>
-
-    <article class="prose">
-      <h2>The refusal, in one sentence</h2>
+    <div class="article-grid">
+      <aside class="article-rail">
+        <div class="byline"><svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg><div class="label">By Nicholas K. Harris, Esq. · September 2026</div></div>
+        <nav class="toc" aria-labelledby="toc-h">
+          <h2 class="toc-h" id="toc-h">Contents</h2>
+          <ol>
+          <li><a href="#the-refusal-in-one-sentence">The refusal, in one sentence</a></li>
+          <li><a href="#the-du-pont-factors-in-plain-language">The du Pont factors, in plain language</a></li>
+          <li><a href="#similarity-of-the-marks">Similarity of the marks</a></li>
+          <li><a href="#relatedness-of-the-goods-and-services">Relatedness of the goods and services</a></li>
+          <li><a href="#arguments-that-carry-weight">Arguments that carry weight</a></li>
+          <li><a href="#consent-and-coexistence-the-basics">Consent and coexistence, the basics</a></li>
+          <li><a href="#when-the-cited-registration-is-the-real-problem">When the cited registration is the real problem</a></li>
+          <li><a href="#refusals-against-madrid-filings">Refusals against Madrid filings</a></li>
+          <li><a href="#answering-one-well">Answering one well</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <div class="article-main">
+        <article class="prose">
+      <h2 id="the-refusal-in-one-sentence">The refusal, in one sentence</h2>
       <p>A Section 2(d) likelihood of confusion refusal means a USPTO examining attorney searched the federal register, found a registered mark considered too close to yours, and refused registration under Section 2(d) of the Lanham Act, 15 U.S.C. 1052(d). The statutory question is whether your mark, used with your goods or services, so resembles the cited mark that ordinary buyers are likely to be confused, mistaken, or deceived about who stands behind the product.</p>
       <p>Two features of that standard shape everything else. First, the test is likelihood, not bare possibility. Some conceivable overlap is not enough; the examining attorney must build a record showing confusion is probable, and the refusal can be attacked wherever that record is thin. Second, the refusal is one attorney's legal position stated in a letter, and it invites a written answer. It is not a verdict. Applications survive 2(d) refusals routinely, on argument and evidence, inside a strict, short response window.</p>
 
-      <h2>The du Pont factors, in plain language</h2>
+      <h2 id="the-du-pont-factors-in-plain-language">The du Pont factors, in plain language</h2>
       <p>The framework comes from In re E. I. du Pont de Nemours &amp; Co., a 1973 decision listing thirteen factors that courts, the Trademark Trial and Appeal Board, and examining attorneys weigh. Nobody weighs all thirteen in any one case. In examination, the analysis almost always turns on a short list:</p>
       <ul>
         <li><strong>Similarity of the marks</strong> in appearance, sound, meaning, and overall commercial impression.</li>
@@ -88,16 +135,16 @@
       </ul>
       <p>Most refusals stand or fall on the first two. When the marks are close and the goods are plainly related, the remaining factors rarely rescue an application. When either of the first two genuinely favors the applicant, the refusal is vulnerable.</p>
 
-      <h2>Similarity of the marks</h2>
+      <h2 id="similarity-of-the-marks">Similarity of the marks</h2>
       <p>Marks are compared as wholes, on sight, sound, connotation, and the total impression they leave in a buyer's memory. But "as wholes" does not mean every element counts equally. Dominant elements carry more weight: descriptive or disclaimed wording counts for little, the literal wording of a mark usually outweighs its design features, and the first word of a phrase tends to do most of the identifying work.</p>
       <p>Similarity in any single dimension can be enough. Marks spelled differently but pronounced alike are treated as highly similar, because word of mouth and voice search do not care about spelling. Marks that neither look nor sound alike can still be refused for meaning the same thing, which is how a foreign word and its English translation can collide under the doctrine of foreign equivalents.</p>
       <p>The practical consequence: a response that lists surface differences ("ours has a hyphen and a logo") persuades nobody. What moves an examining attorney is a difference in the part of the mark that consumers would actually use to identify the source, or a real difference in what the two marks mean.</p>
 
-      <h2>Relatedness of the goods and services</h2>
+      <h2 id="relatedness-of-the-goods-and-services">Relatedness of the goods and services</h2>
       <p>The goods do not have to be identical, or even competitive. Wine and restaurant services have been found related; so have clothing and retail store services featuring clothing. The question is whether consumers, seeing similar marks on the two sets of goods, would assume a common source. Examining attorneys prove relatedness with evidence: third-party registrations covering both kinds of goods under one mark, and web pages showing the same companies selling both. A response can attack that evidence, and should, when it is generic or stale.</p>
       <p>One rule surprises almost everyone: the comparison runs on the identifications as written, not on the real marketplace. An application for "clothing" with no limits is deemed to cover every kind of clothing, moving through every ordinary trade channel to every ordinary buyer, whatever the applicant actually sells. This is why drafting the identification is genuine legal work, and why a carefully built application, of the kind we prepare in our <a href="/services/us-trademark-registration/">U.S. trademark registration</a> practice, avoids some 2(d) fights before they start.</p>
 
-      <h2>Arguments that carry weight</h2>
+      <h2 id="arguments-that-carry-weight">Arguments that carry weight</h2>
       <p><strong>Different commercial impression.</strong> The strongest similarity arguments reframe the comparison around meaning. If the shared word carries a different connotation in each mark, or sits in a different grammatical role, the overall impressions can diverge even where the letters overlap. This argument is won with dictionaries, usage evidence, and the marks themselves, not with adjectives.</p>
       <p><strong>Weakness of the cited mark.</strong> When the register is crowded with marks sharing the same element for related goods, that element is weak, and consumers learn to distinguish marks on small differences. A well-documented crowded-field showing, built from live third-party registrations and marketplace uses, narrows the cited mark's scope of protection and can carry the response on its own.</p>
       <p><strong>Narrowing the identification.</strong> Amending the goods or services to a specific type, channel, or customer class can pull the two marks out of each other's orbit. The amendment must stay within the scope of what was originally filed, so this door only opens as wide as the original drafting allowed.</p>
@@ -105,36 +152,76 @@
       <p><strong>The applicant's own prior registration.</strong> An applicant who already owns a registration for substantially the same mark and goods, one that has coexisted with the cited mark, can argue that the new application changes nothing in the marketplace. Examining attorneys take that history seriously.</p>
       <p>What rarely works: pointing to a logo or stylization the cited mark lacks, describing marketplace facts the written identifications contradict, or insisting that no confusion has occurred when the marks have barely coexisted. Arguments an examiner has read a thousand times get the answer written a thousand times.</p>
 
-      <h2>Consent and coexistence, the basics</h2>
+      <h2 id="consent-and-coexistence-the-basics">Consent and coexistence, the basics</h2>
       <p>One du Pont factor belongs to the cited registrant: consent. A consent agreement is the registrant's written statement that it consents to your registration and does not believe confusion is likely. The du Pont decision itself said such agreements deserve great weight, on the sensible ground that the parties closest to the marketplace know it better than any examiner, and examining attorneys are instructed not to substitute their own judgment for a credible consent.</p>
       <p>Credible is the load-bearing word. A "naked" consent, a bare sentence with no reasons, earns little weight. A detailed consent recites why confusion is unlikely (different goods, channels, customers, or territories) and what each party will do to keep buyers from being confused. A coexistence agreement goes further still: it is a contract governing both sides' use going forward, and it can be worth negotiating even when a consent alone would satisfy the USPTO.</p>
       <p>Approaching a registrant is a strategic decision, not a form letter. It reveals your interest in the mark, it opens a negotiation you cannot fully control, and it should be weighed against the strength of the arguments available on the record alone.</p>
 
-      <h2>When the cited registration is the real problem</h2>
+      <h2 id="when-the-cited-registration-is-the-real-problem">When the cited registration is the real problem</h2>
       <p>Some cited registrations are dead weight: marks no longer in use, held by owners who have moved on. The register has tools for that. Expungement and reexamination proceedings under the Trademark Modernization Act target registrations covering goods on which the mark was never used, or was not in use when the registrant claimed it was; a petition to cancel at the Trademark Trial and Appeal Board reaches further; and a registration whose maintenance filings lapse clears the path on its own. When the conflict is with an earlier filed application rather than a registration, no refusal issues yet: the examining attorney notes the potential conflict and suspends the application until the earlier one registers or dies. Choosing among these paths is a judgment about cost, timing, and how much the mark is worth to the client.</p>
 
-      <h2>Refusals against Madrid filings</h2>
+      <h2 id="refusals-against-madrid-filings">Refusals against Madrid filings</h2>
       <p>Foreign applicants who designate the United States under Section 66(a) of the Lanham Act face exactly the same Section 2(d) analysis. The refusal arrives as a provisional refusal notified through WIPO, and because 37 C.F.R. 2.11 requires foreign-domiciled applicants to be represented by U.S.-licensed counsel, answering it means engaging a U.S. attorney. Our <a href="/services/madrid-protocol-refusals/">Madrid Protocol refusal</a> practice exists for precisely this situation.</p>
 
-      <h2>Answering one well</h2>
+      <h2 id="answering-one-well">Answering one well</h2>
       <p>A good 2(d) response is built on the record: it takes the examining attorney's evidence apart piece by piece, supplies contrary evidence of its own, and argues the factors that genuinely favor the applicant instead of reciting all thirteen. It also starts with an honest triage, because some refusals are better answered by amendment than argument, and a few are not worth answering at all. That triage, and the response itself, is the core of our <a href="/services/office-action-responses/">Office Action response</a> work.</p>
       <p>If you are holding a Section 2(d) refusal and the right path is not obvious, <a class="gold" href="/contact/">write to the firm</a> and we will give you a plain answer.</p>
-      <p style="font-size:13px;color:#666B74">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
+      <p style="font-size:13px;color:#8B9199">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
     </article>
+        <div class="author-card">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+        <div>
+          <span class="label">About the author</span>
+          <p class="author-name">Nicholas K. Harris, Esq.</p>
+          <p class="author-role">Principal and Counsel of Record, Crown Hudson Law Firm PLLC. Admitted in New York, 2011.</p>
+          <a href="/counsel/">About the counsel.</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <section class="related" aria-labelledby="related-h">
+      <div class="sec-kicker reveal"><span class="tick"></span><h2 class="label" id="related-h">Further reading</h2></div>
+      <div class="cardlink-grid">
+        <a class="cardlink" href="/insights/descriptiveness-refusals-2e/">
+          <h3>Merely Descriptive? The Section 2(e) Refusal Family</h3>
+          <p>The distinctiveness spectrum, the 2(e) refusal family, acquired distinctiveness, and the Supplemental Register.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/madrid-protocol-66a-refusals/">
+          <h3>Madrid Protocol Refusals in the United States</h3>
+          <p>Why U.S. designations draw provisional refusals, and how Section 66(a) holders respond through U.S. counsel.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/trademark-specimen-refusals/">
+          <h3>Specimen Refusals: When Your Proof of Use Fails</h3>
+          <p>What examining attorneys accept, the e-commerce mistakes behind many refusals, and why mockups are a serious problem.</p>
+          <span class="go">Read the article</span>
+        </a>
+      </div>
+    </section>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="fbrand">
-      <span class="mark"></span>
-      <span class="serif name">Crown Hudson Law</span>
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg class="emblem emblem-md" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+          <span class="serif name">Crown Hudson Law</span>
+        </div>
+        <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
+      </div>
+      <nav class="fnav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+      <div>
+        <div class="label adv">Attorney Advertising</div>
+        <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+        <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+      </div>
     </div>
-    <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
-    <div class="fnav"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
-    <div class="label adv">Attorney Advertising</div>
-    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
-    <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+    <div class="fword" aria-hidden="true">Crown Hudson</div>
   </div>
 </footer>
 

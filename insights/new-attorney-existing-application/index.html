@@ -19,6 +19,7 @@
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
 <script type="application/ld+json">
@@ -33,29 +34,58 @@
   "mainEntityOfPage": "https://crownhudsonlaw.com/insights/new-attorney-existing-application/"
 }
 </script>
+<script src="/site.js" defer></script>
 </head>
-<body>
+<body class="p-article">
 
 <div class="hairline"></div>
 
-<div style="position:relative">
-  <div class="atmo"></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="site-top">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><pattern id="ch-hatch" width="3.2" height="3.2" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V3.2" stroke="currentColor" stroke-width=".55" opacity=".5"/></pattern><pattern id="ch-hatch-fine" width="1.15" height="1.15" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0V1.15" stroke="currentColor" stroke-width=".5" opacity=".42" vector-effect="non-scaling-stroke"/></pattern><symbol id="ch-emblem" viewBox="0 0 120 120"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" vector-effect="non-scaling-stroke">
+<path class="l1" vector-effect="non-scaling-stroke" d="M22 78V46l22 16 16-32 16 32 22-16v32z"/>
+<path class="l2" vector-effect="non-scaling-stroke" d="M22 78h76v10H22z"/>
+</g>
+<g class="hatch" fill="url(#ch-hatch)" stroke="none">
+<path d="M22 78h76v10H22z"/>
+<path d="M22 78V46l22 16 16-32 16 32 22-16v32z" opacity=".45"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+<path class="l2" vector-effect="non-scaling-stroke" d="M60 58l6 8-6 8-6-8z"/>
+<circle class="l1" vector-effect="non-scaling-stroke" cx="22" cy="46" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="60" cy="30" r="3"/><circle class="l1" vector-effect="non-scaling-stroke" cx="98" cy="46" r="3"/>
+</g>
+<g fill="none" stroke="currentColor" stroke-linecap="round">
+<path class="l3" vector-effect="non-scaling-stroke" stroke-width="1.3" d="M12 99c16-7 28 5 46-1s30-9 50 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1.1" opacity=".6" d="M18 107c16-7 28 5 44-1s26-8 44 0"/>
+<path class="l4" vector-effect="non-scaling-stroke" stroke-width="1" opacity=".32" d="M26 115c14-6 24 4 38-1s22-7 36 0"/>
+</g></symbol></defs></svg>
   <div class="wrap">
     <header class="site">
-      <a class="brand" href="/">
-        <svg width="30" height="30" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22.5" stroke="#C9A45E" stroke-width="1"/><path d="M24 12 L33.5 24 L24 36 L14.5 24 Z" stroke="#C9A45E" stroke-width="1"/><path d="M24 17 L24 31" stroke="#C9A45E" stroke-width="0.8" opacity="0.75"/></svg>
+      <a class="brand" href="/" aria-label="Crown Hudson Law, home">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
         <span class="serif">Crown Hudson Law</span>
       </a>
-      <nav class="top">
+      <a class="nav-toggle" href="#site-nav" data-nav-toggle><span class="nav-toggle-bars" aria-hidden="true"></span><span>Menu</span></a>
+      <nav class="top" id="site-nav" aria-label="Primary">
+        <a class="nav-close" href="#" data-nav-close>Close</a>
         <a href="/services/">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="/for-firms/">For firms</a>
         <a href="/counsel/">Counsel</a>
+        <a href="/insights/" class="on" aria-current="page">Insights</a>
         <a href="/faq/">FAQ</a>
         <a href="/contact/">Contact</a>
         <span class="pill"><span class="dot"></span>Launching soon</span>
       </nav>
     </header>
+  </div>
+</div>
+
+<main id="main">
+<div class="page-top" style="position:relative">
+  <div class="atmo"></div>
+  <svg class="wm-emblem hero-wm" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+  <div class="wrap">
 
     <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><a href="/insights/">Insights</a><span class="sep">/</span>Changing Attorneys Mid-Application: How Takeover Representation Works</div>
 
@@ -69,10 +99,23 @@
       <p class="it lede">The application belongs to the applicant, not to whoever filed it, and when representation fails, the file can move on to counsel who will finish the job.</p>
     </section>
 
-    <div class="label">By Nicholas K. Harris, Esq. · September 2026</div>
-
-    <article class="prose">
-      <h2>Why applicants change counsel mid-application</h2>
+    <div class="article-grid">
+      <aside class="article-rail">
+        <div class="byline"><svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg><div class="label">By Nicholas K. Harris, Esq. · September 2026</div></div>
+        <nav class="toc" aria-labelledby="toc-h">
+          <h2 class="toc-h" id="toc-h">Contents</h2>
+          <ol>
+          <li><a href="#why-applicants-change-counsel-mid-application">Why applicants change counsel mid-application</a></li>
+          <li><a href="#how-appearance-and-revocation-work-in-practice">How appearance and revocation work in practice</a></li>
+          <li><a href="#what-a-new-attorney-needs-from-you">What a new attorney needs from you</a></li>
+          <li><a href="#what-can-be-fixed-late-and-what-cannot">What can be fixed late, and what cannot</a></li>
+          <li><a href="#if-your-application-came-through-a-filing-mill">If your application came through a filing mill</a></li>
+          </ol>
+        </nav>
+      </aside>
+      <div class="article-main">
+        <article class="prose">
+      <h2 id="why-applicants-change-counsel-mid-application">Why applicants change counsel mid-application</h2>
       <p>A federal trademark application often outlives the arrangement that produced it. It moves at the USPTO's pace, and in the Office's eyes the person handling it is replaceable at the applicant's word. When people ask a new trademark attorney to take over an application, the reasons come from a short list, and none of them is exotic.</p>
       <p><strong>The filing service hit its ceiling.</strong> Non-attorney filing companies can get an application on file, but they cannot lawfully represent anyone before the USPTO, and examination is where that limit bites. When an Office Action arrives raising a real refusal, the service has nothing left to sell. Some say so plainly. Others go quiet, and the applicant discovers the limit only when the deadline is close.</p>
       <p><strong>The prior attorney was sanctioned or excluded.</strong> The USPTO has spent the last several years sanctioning practitioners who lent their names to high-volume filing operations without genuinely reviewing the work, and terminating applications connected to them. When the attorney of record is excluded from practice before the Office, every client file that attorney held needs new counsel, through no fault of the applicants.</p>
@@ -80,7 +123,7 @@
       <p><strong>The applicant self-filed and got refused.</strong> Filing without counsel is lawful for U.S.-domiciled applicants and works well enough until examination. A refusal under Section 2(d) or Section 2(e)(1) is a legal argument, not a form to fill in, and this is the moment most self-filers decide the application deserves <a class="gold" href="/services/office-action-responses/">a professionally built response</a>.</p>
       <p><strong>The Office ordered it.</strong> Under 37 C.F.R. 2.11, an applicant domiciled outside the United States must be represented by a U.S.-licensed attorney. Foreign applicants who filed alone, or through a service that was never counsel at all, receive a requirement to appoint one, and the appointment is not optional.</p>
 
-      <h2>How appearance and revocation work in practice</h2>
+      <h2 id="how-appearance-and-revocation-work-in-practice">How appearance and revocation work in practice</h2>
       <p>The mechanics are simpler than most applicants fear. The USPTO recognizes a practitioner under 37 C.F.R. 2.17, and once recognized, that attorney is the one the Office corresponds with. Recognition ordinarily continues until the application registers or goes abandoned, or until the applicant revokes the appointment or the attorney properly withdraws.</p>
       <p>The switch itself is a filing, not a negotiation. The applicant revokes the prior appointment and appoints new counsel, and in current practice both steps travel together in a single TEAS submission that updates the attorney and correspondence information in the record. The revocation is signed by the applicant personally, or by someone with legal authority to bind a business applicant. The incoming attorney prepares the paperwork; the client signs it.</p>
       <p>Three things about this step surprise people reliably.</p>
@@ -88,7 +131,7 @@
       <p><strong>The file is already public.</strong> Every document in the prosecution history is readable in the USPTO's TSDR system by anyone holding the serial number. A prospective new attorney can read the entire record, and give a straight assessment of it, before you sign anything.</p>
       <p><strong>Deadlines do not move.</strong> The response clock set by an Office Action keeps running straight through the handover. Changing attorneys is not a ground for more time and the Office will not treat it as one, which is why the appointment and the substantive work should be planned together rather than one after the other.</p>
 
-      <h2>What a new attorney needs from you</h2>
+      <h2 id="what-a-new-attorney-needs-from-you">What a new attorney needs from you</h2>
       <p>A takeover engagement starts with a short set of materials, most of which you already have.</p>
       <ul>
         <li><strong>The serial number.</strong> From it, the whole official record is retrievable: the application as filed, every Office Action, every response, every notice. This one number does most of the work.</li>
@@ -100,33 +143,73 @@
       <p>Notice what is not on the list: your USPTO.gov account and its password. New counsel appears through the attorney's own account and never needs yours. A representative who asks for your login credentials is describing exactly the practice the Office has been sanctioning.</p>
       <p>Takeover work at this firm is quoted the way everything here is quoted: a flat fee, stated in writing once the record has been read, on the terms set out on the <a class="gold" href="/pricing/">pricing page</a>.</p>
 
-      <h2>What can be fixed late, and what cannot</h2>
+      <h2 id="what-can-be-fixed-late-and-what-cannot">What can be fixed late, and what cannot</h2>
       <p>A change of counsel usually happens mid-problem, so the practical question is what a new trademark attorney taking over the application can still repair. The answer is more than applicants fear and less than they hope, and it splits cleanly.</p>
       <p><strong>Still fixable, while the relevant window is open.</strong> An unanswered Office Action can be answered completely, refusals argued and requirements satisfied, right up to the deadline. An identification of goods and services can be clarified or narrowed. A defective specimen can often be replaced with a substitute supported by a proper declaration. A disclaimer can be entered, a translation supplied, an entity clarified. In some descriptiveness cases, amendment to the Supplemental Register remains on the table. Even an application that has gone abandoned can sometimes be revived by petition, where the failure to respond was unintentional, inside a strict window fixed by rule; that petition is a safety net with real holes in it, not a plan.</p>
       <p><strong>Beyond repair.</strong> Some defects sit in the foundation. The identification can never be broadened; goods dropped or never claimed cannot be added to this application. The mark itself cannot be materially altered under 37 C.F.R. 2.72; a redesigned logo is a new application, not an amendment. An application filed by a party who did not own the mark is void, and no substitution of counsel cures it. A deadline that has fully lapsed, past the reach of revival, is gone, and the filing date behind it goes with it. And statements already made to the Office that were not true cannot be quietly unmade; what a new attorney can do is assess the damage candidly and chart the cleanest lawful path forward, which is sometimes a corrected record and sometimes a fresh start.</p>
       <p>When the fresh start is the right answer, it should be said plainly. A well-built <a class="gold" href="/services/us-trademark-registration/">new application</a> with the old defects designed out often costs less, in money and in months, than heroic surgery on a doomed one. A practice that recommends rescue in every case is selling procedures, not judgment.</p>
 
-      <h2>If your application came through a filing mill</h2>
+      <h2 id="if-your-application-came-through-a-filing-mill">If your application came through a filing mill</h2>
       <p>One version of this story deserves its own section, because the applicants caught in it did nothing wrong. In recent years the USPTO has moved against high-volume operations, many based overseas, that filed enormous numbers of applications using attorney names without authority, recycled or fabricated specimens, and credentials that were never real. The Office has terminated proceedings, sanctioned the participants, and scrutinized the applications they touched.</p>
       <p>If your application was filed through such an operation, the record may show an attorney you never spoke to, a specimen you never provided, or a correspondence address you do not recognize. The path forward is the ordinary takeover machinery pointed at an extraordinary mess: appoint genuine counsel, review everything filed under your name, correct what the rules allow, answer whatever the Office has demanded, and be candid about the rest. Some of these applications are salvageable and some are not, and the only way to learn which is yours is to read the file.</p>
 
       <p>If your application is stalled and the person who filed it is gone, silent, or barred from helping, the file can still move. <a class="gold" href="/contact/">Write to the firm</a> with the serial number, and you will get a plain assessment of what the record shows, what remains fixable, and whether taking the application over is worth doing at all.</p>
-      <p style="font-size:13px;color:#666B74;line-height:1.64">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
+      <p style="font-size:13px;color:#8B9199;line-height:1.64">This article is general information about United States trademark practice, not legal advice about any particular matter. Attorney Advertising.</p>
     </article>
+        <div class="author-card">
+        <svg class="emblem" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+        <div>
+          <span class="label">About the author</span>
+          <p class="author-name">Nicholas K. Harris, Esq.</p>
+          <p class="author-role">Principal and Counsel of Record, Crown Hudson Law Firm PLLC. Admitted in New York, 2011.</p>
+          <a href="/counsel/">About the counsel.</a>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <section class="related" aria-labelledby="related-h">
+      <div class="sec-kicker reveal"><span class="tick"></span><h2 class="label" id="related-h">Further reading</h2></div>
+      <div class="cardlink-grid">
+        <a class="cardlink" href="/insights/intent-to-use-vs-use-in-commerce/">
+          <h3>Intent to Use vs. Use in Commerce</h3>
+          <p>The two filing bases, what counts as real use, the statement of use step, and when to file each.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/supplemental-register-explained/">
+          <h3>The Supplemental Register: Worth It?</h3>
+          <p>What it protects, what it cannot, and the road back to the Principal Register.</p>
+          <span class="go">Read the article</span>
+        </a>
+        <a class="cardlink" href="/insights/word-mark-vs-logo-mark/">
+          <h3>Word Mark or Logo? What to File First</h3>
+          <p>What each filing protects, why the word mark usually comes first, and when the logo earns its own application.</p>
+          <span class="go">Read the article</span>
+        </a>
+      </div>
+    </section>
   </div>
 </div>
+</main>
 
 <footer class="site">
   <div class="wrap">
-    <div class="fbrand">
-      <span class="mark"></span>
-      <span class="serif name">Crown Hudson Law</span>
+    <div class="fgrid">
+      <div>
+        <div class="fbrand">
+          <svg class="emblem emblem-md" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><use href="#ch-emblem"/></svg>
+          <span class="serif name">Crown Hudson Law</span>
+        </div>
+        <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
+      </div>
+      <nav class="fnav" aria-label="Footer"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></nav>
+      <div>
+        <div class="label adv">Attorney Advertising</div>
+        <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
+        <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+      </div>
     </div>
-    <p class="contact-line">566 Route 6, Suite 1W, Mahopac, NY 10541 · (718) 737-9618</p>
-    <div class="fnav"><a href="/">Home</a><a href="/services/">Services</a><a href="/pricing/">Pricing</a><a href="/for-firms/">For firms</a><a href="/counsel/">Counsel</a><a href="/insights/">Insights</a><a href="/faq/">FAQ</a><a href="/contact/">Contact</a></div>
-    <div class="label adv">Attorney Advertising</div>
-    <p>Prior results do not guarantee a similar outcome. The information on this website is general and is not legal advice; no attorney-client relationship is formed until a written engagement is signed. Crown Hudson Law Firm PLLC is not affiliated with the U.S. Patent and Trademark Office or any government agency.</p>
-    <p class="copy">© 2026 Crown Hudson Law Firm PLLC · New York</p>
+    <div class="fword" aria-hidden="true">Crown Hudson</div>
   </div>
 </footer>
 
