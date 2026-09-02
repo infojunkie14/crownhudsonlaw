@@ -12,21 +12,40 @@
   var toggle = d.querySelector('[data-nav-toggle]');
   var nav = d.getElementById('site-nav');
   var closer = d.querySelector('[data-nav-close]');
+  var savedY = 0;
 
   function navOpen() { return root.classList.contains('nav-open'); }
+  /* focus() scrolls its target into view; the drawer must not move the page */
+  function focusQuietly(el) {
+    try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); }
+  }
   function setNav(open) {
+    if (open === navOpen()) {
+      if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      return;
+    }
+    if (open) savedY = w.pageYOffset || root.scrollTop || 0;
     root.classList.toggle('nav-open', open);
     if (toggle) toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    /* keep keyboard focus inside the drawer while it is open */
-    var behind = d.querySelectorAll('main, footer.site');
+    /* keep keyboard focus inside the drawer while it is open:
+       everything outside #site-nav becomes inert */
+    var behind = d.querySelectorAll('main, footer.site, .skip, header.site .brand, header.site .pill, .hairline');
     for (var b = 0; b < behind.length; b++) {
+      if (nav.contains(behind[b])) continue;
       if (open) behind[b].setAttribute('inert', ''); else behind[b].removeAttribute('inert');
     }
     if (open) {
       var first = nav.querySelector('a');
-      if (first) first.focus();
-    } else if (toggle && d.activeElement && nav.contains(d.activeElement)) {
-      toggle.focus();
+      if (first) focusQuietly(first);
+    } else {
+      /* focus first, then scroll: focusing scrolls the element into view and
+         would otherwise undo the restore below */
+      if (toggle && (d.activeElement === d.body || nav.contains(d.activeElement))) focusQuietly(toggle);
+      /* body{position:fixed} on phones drops the scroll position; put it back */
+      var prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      w.scrollTo(0, savedY);
+      root.style.scrollBehavior = prev;
     }
   }
 
@@ -35,16 +54,29 @@
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'site-nav');
     toggle.addEventListener('click', function (e) { e.preventDefault(); setNav(!navOpen()); });
+    /* Space activates a button; on a link it would scroll the page instead */
+    toggle.addEventListener('keydown', function (e) {
+      if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); setNav(!navOpen()); }
+    });
     if (closer) closer.addEventListener('click', function (e) { e.preventDefault(); setNav(false); });
     d.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && navOpen()) setNav(false);
+      /* Tab stays inside the drawer while it is open */
+      if (e.key === 'Tab' && navOpen()) {
+        var items = nav.querySelectorAll('a[href]');
+        if (!items.length) return;
+        var firstItem = items[0], lastItem = items[items.length - 1];
+        if (e.shiftKey && d.activeElement === firstItem) { e.preventDefault(); lastItem.focus(); }
+        else if (!e.shiftKey && d.activeElement === lastItem) { e.preventDefault(); firstItem.focus(); }
+        else if (!nav.contains(d.activeElement)) { e.preventDefault(); firstItem.focus(); }
+      }
     });
     nav.addEventListener('click', function (e) {
       var a = e.target.closest ? e.target.closest('a[href]') : null;
-      if (a && a !== closer && navOpen()) root.classList.remove('nav-open');
+      if (a && a !== closer && navOpen()) setNav(false);
     });
     try {
-      var wide = w.matchMedia('(min-width: 861px)');
+      var wide = w.matchMedia('(min-width: 1001px)');
       var onWide = function (ev) { if (ev.matches && navOpen()) setNav(false); };
       if (wide.addEventListener) wide.addEventListener('change', onWide);
       else if (wide.addListener) wide.addListener(onWide);
