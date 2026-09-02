@@ -436,6 +436,37 @@ body.p-insights .hero-wm{display:none}
 @media(min-width:761px) and (max-width:900px){.related .cardlink-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 .related a.cardlink h3{font-size:21px}
 
+/* ----------------------------------------------------------- specimen */
+.article-main{min-width:0}
+.specimen{border:1px solid var(--line-2);background:var(--band);padding:clamp(20px,3.4vw,40px);margin:28px 0 34px;max-width:648px;position:relative}
+.specimen .doc-kicker{font-family:var(--sans);font-size:var(--t-label);letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--gold);margin:0 0 20px}
+.specimen h3{font-family:var(--serif);font-weight:500;font-size:clamp(21px,2.4vw,27px);line-height:1.2;color:#F1EADB;margin:34px 0 12px;letter-spacing:-.005em}
+.specimen h4{font-family:var(--sans);font-size:15px;font-weight:600;color:var(--lede);margin:22px 0 10px;line-height:1.45}
+.specimen p{margin:0 0 15px;font-size:var(--t-small-body);color:var(--body);line-height:1.7;max-width:none}
+.specimen ul{margin:0 0 15px;padding-left:20px;font-size:var(--t-small-body);color:var(--body);line-height:1.7;max-width:none}
+.specimen li{margin-bottom:7px;padding-left:2px}
+.specimen li::marker{color:var(--gold)}
+.specimen strong{color:#D8D2C2;font-weight:600}
+.specimen em{color:var(--sec)}
+.specimen a{color:var(--gold)}
+.doc-caption{border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);padding:18px 0;margin:0 0 30px;font-size:14px;line-height:1.55;display:grid;grid-template-columns:1fr;gap:2px 22px}
+@media(min-width:601px){.doc-caption{grid-template-columns:max-content minmax(0,1fr);gap:7px 22px}}
+.doc-caption dt{color:var(--faint);letter-spacing:.05em}
+.doc-caption dd{margin:0 0 9px;color:var(--ink-3);overflow-wrap:anywhere}
+@media(min-width:601px){.doc-caption dd{margin-bottom:0}}
+.doc-scroll{overflow-x:auto;margin:0 0 18px;-webkit-overflow-scrolling:touch}
+.doc-table{border-collapse:collapse;font-size:13.5px;line-height:1.5;min-width:100%}
+.doc-table th,.doc-table td{text-align:left;padding:9px 20px 9px 0;border-bottom:1px solid var(--line);color:var(--body);vertical-align:top}
+.doc-table th{color:var(--gold);font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.doc-table tr:last-child td{border-bottom:0}
+@media(max-width:600px){.doc-table{font-size:13px}.doc-table th,.doc-table td{padding-right:12px}.doc-table th{white-space:normal;letter-spacing:.12em}}
+.doc-sig{border-top:1px solid var(--line-2);margin-top:30px;padding-top:24px}
+.doc-sig .sig-mark{font-family:var(--serif);font-size:22px;color:var(--gold-3);margin:0 0 8px;line-height:1.2}
+.doc-sig p{margin:0 0 3px;font-size:14px;color:var(--sec);line-height:1.62}
+.doc-sig .cert{margin-top:20px;font-size:13px;color:var(--muted);line-height:1.66;font-style:italic}
+.doc-flag{font-size:13.5px;color:var(--muted);line-height:1.66;border-left:1px solid var(--gold-a35);padding:2px 0 2px 16px;margin:22px 0 0;max-width:62ch}
+@media print{.specimen{background:#fff !important;border-color:#bbb !important}.specimen p,.specimen li,.doc-table td,.doc-sig p{color:#222 !important}.specimen h3,.specimen h4,.specimen strong,.doc-caption dd{color:#111 !important}.doc-caption dt,.doc-table th,.specimen .doc-kicker,.doc-sig .sig-mark{color:#7A5C1E !important}.doc-caption,.doc-sig,.doc-table th,.doc-table td{border-color:#ccc !important}}
+
 /* ------------------------------------------------------------ pricing */
 .cardlink .price{font-family:var(--serif);font-size:clamp(54px,7vw,84px);font-weight:500;color:var(--gold-2);line-height:.95;letter-spacing:-.02em;margin-bottom:22px;font-variant-numeric:lining-nums}
 body.p-pricing a.cardlink{padding:38px 32px 34px}
